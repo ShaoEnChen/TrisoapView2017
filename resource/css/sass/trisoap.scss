@@ -1,0 +1,134 @@
+/*
+ * Import fonts
+ */
+
+// @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+// @import url(//fonts.googleapis.com/css?family=Kanit:400,200,100,300,500,600,700,800,900);
+// @import url(//fonts.googleapis.com/css?family=Raleway);
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/* =========================================================================
+ * CSS Normalization
+ * =========================================================================
+ */
+
+@import url(normalize.css);
+
+a {
+	text-decoration: none;
+}
+
+$bg-orange: #F18C41;
+
+/* =========================================================================
+ * Preloader
+ * =========================================================================
+ */
+
+#preloader {
+	display: none;
+}
+
+/* =========================================================================
+ * Header
+ * =========================================================================
+ */
+
+.flexslider {
+	border: none;
+}
+
+.flex-control-nav {
+	position: absolute;
+	bottom: 14%;
+	z-index: 10;
+	li a {
+		background: #fff;
+		&:hover {
+			background: #fff;
+		}
+		&.flex-active {
+			background: $bg-orange;
+			cursor: pointer;
+		}
+	}
+}
+
+.flex-control-paging li a {
+	box-shadow: none;
+}
+
+/* =========================================================================
+ * Main Navigation Bar
+ * =========================================================================
+ */
+
+$nav-link-active-color: #d3bd98;
+
+nav > div {
+	display: inline-block;
+}
+
+#main-navbar {
+	background-color: #000;
+}
+
+.nav-brand {
+
+}
+
+.nav-mobile-toggle {
+	position: relative;
+	width: 56px;
+	height: 100%;
+	span {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 9px;
+		background: #d3531a;
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: 18px;
+		}
+		&:nth-child(3) {
+			top: 36px;
+		}
+	}
+}
+
+.nav-main-menu {
+	list-style: none;
+}
+
+.nav-main-item {
+	display: inline-block;
+	a {
+		color: #fff;
+	}
+	a:hover,
+	a:active {
+		color: $nav-link-active-color;
+	}
+}
+
+.nav-dropdown-header {
+	color: #777;
+}
+
+.has-dropdown:hover {
+	& > .nav-dropdown-menu {
+		display: block;
+	}
+}
+
+.nav-dropdown-menu {
+	display: none;
+	list-style: none;
+}
+
+.nav-dropdown-item {
+
+}

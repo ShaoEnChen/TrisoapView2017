@@ -1,0 +1,109 @@
+/*
+ * Import fonts
+ */
+/* =========================================================================
+ * CSS Normalization
+ * =========================================================================
+ */
+@import url(normalize.css);
+a {
+  text-decoration: none;
+}
+
+/* =========================================================================
+ * Preloader
+ * =========================================================================
+ */
+#preloader {
+  display: none;
+}
+
+/* =========================================================================
+ * Header
+ * =========================================================================
+ */
+.flexslider {
+  border: none;
+}
+
+.flex-control-nav {
+  position: absolute;
+  bottom: 14%;
+  z-index: 10;
+}
+.flex-control-nav li a {
+  background: #fff;
+}
+.flex-control-nav li a:hover {
+  background: #fff;
+}
+.flex-control-nav li a.flex-active {
+  background: #F18C41;
+  cursor: pointer;
+}
+
+.flex-control-paging li a {
+  box-shadow: none;
+}
+
+/* =========================================================================
+ * Main Navigation Bar
+ * =========================================================================
+ */
+nav > div {
+  display: inline-block;
+}
+
+#main-navbar {
+  background-color: #000;
+}
+
+.nav-mobile-toggle {
+  position: relative;
+  width: 56px;
+  height: 100%;
+}
+.nav-mobile-toggle span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 9px;
+  background: #d3531a;
+}
+.nav-mobile-toggle span:nth-child(1) {
+  top: 0;
+}
+.nav-mobile-toggle span:nth-child(2) {
+  top: 18px;
+}
+.nav-mobile-toggle span:nth-child(3) {
+  top: 36px;
+}
+
+.nav-main-menu {
+  list-style: none;
+}
+
+.nav-main-item {
+  display: inline-block;
+}
+.nav-main-item a {
+  color: #fff;
+}
+.nav-main-item a:hover,
+.nav-main-item a:active {
+  color: #d3bd98;
+}
+
+.nav-dropdown-header {
+  color: #777;
+}
+
+.has-dropdown:hover > .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  list-style: none;
+}
