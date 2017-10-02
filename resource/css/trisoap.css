@@ -6,10 +6,18 @@
  * =========================================================================
  */
 @import url(normalize.css);
-a {
-  text-decoration: none;
-}
-
+/*
+ * 1:
+ * 2:
+ * 3:
+ * 4:
+ * 5:
+ * 6:
+ * 7: .flex-control-nav
+ * 8: #main-navbar
+ * 9: .nav-dropdown-menu
+ * 10:
+ */
 /* =========================================================================
  * Preloader
  * =========================================================================
@@ -19,43 +27,49 @@ a {
 }
 
 /* =========================================================================
- * Header
- * =========================================================================
- */
-.flexslider {
-  border: none;
-}
-
-.flex-control-nav {
-  position: absolute;
-  bottom: 14%;
-  z-index: 10;
-}
-.flex-control-nav li a {
-  background: #fff;
-}
-.flex-control-nav li a:hover {
-  background: #fff;
-}
-.flex-control-nav li a.flex-active {
-  background: #F18C41;
-  cursor: pointer;
-}
-
-.flex-control-paging li a {
-  box-shadow: none;
-}
-
-/* =========================================================================
  * Main Navigation Bar
  * =========================================================================
  */
-nav > div {
-  display: inline-block;
+.nav-main-item {
+  padding: 0 13px;
+}
+
+.nav-dropdown-header, .nav-dropdown-item {
+  padding: 12px 18px;
+}
+
+.nav-main-link, .nav-dropdown-header {
+  font: 11px "Open Sans", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
 }
 
 #main-navbar {
-  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #18191B;
+  z-index: 8;
+}
+#main-navbar > div {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav-brand {
+  display: block;
+  margin-left: 25px;
+}
+.nav-brand img {
+  width: auto;
+  height: 30px;
+  vertical-align: middle;
 }
 
 .nav-mobile-toggle {
@@ -82,28 +96,76 @@ nav > div {
 
 .nav-main-menu {
   list-style: none;
+  margin: 0 25px 0 0;
+}
+
+.nav-main-link {
+  color: #fff;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+}
+.nav-main-link:hover, .nav-main-link:active {
+  color: #d3bd98;
 }
 
 .nav-main-item {
   display: inline-block;
-}
-.nav-main-item a {
-  color: #fff;
-}
-.nav-main-item a:hover,
-.nav-main-item a:active {
-  color: #d3bd98;
 }
 
 .nav-dropdown-header {
   color: #777;
 }
 
+.has-dropdown {
+  position: relative;
+}
 .has-dropdown:hover > .nav-dropdown-menu {
   display: block;
 }
 
 .nav-dropdown-menu {
   display: none;
+  position: absolute;
+  min-width: 210px;
+  margin-left: -13px;
+  padding: 10px 0;
   list-style: none;
+  background-color: #18191B;
+  z-index: 9;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #000;
+}
+
+/* =========================================================================
+ * Header
+ * =========================================================================
+ */
+header {
+  margin-top: 60px;
+}
+
+.flexslider {
+  border: none;
+}
+
+.flex-control-nav {
+  position: absolute;
+  bottom: 14%;
+  z-index: 7;
+}
+.flex-control-nav li a {
+  background: #fff;
+}
+.flex-control-nav li a:hover {
+  background: #fff;
+}
+.flex-control-nav li a.flex-active {
+  background: #F18C41;
+  cursor: pointer;
+}
+
+.flex-control-paging li a {
+  box-shadow: none;
 }

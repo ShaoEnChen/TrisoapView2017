@@ -14,9 +14,19 @@
 
 @import url(normalize.css);
 
-a {
-	text-decoration: none;
-}
+// z-index Scale: 1 - 10
+/*
+ * 1:
+ * 2:
+ * 3:
+ * 4:
+ * 5:
+ * 6:
+ * 7: .flex-control-nav
+ * 8: #main-navbar
+ * 9: .nav-dropdown-menu
+ * 10:
+ */
 
 $bg-orange: #F18C41;
 
@@ -30,51 +40,56 @@ $bg-orange: #F18C41;
 }
 
 /* =========================================================================
- * Header
- * =========================================================================
- */
-
-.flexslider {
-	border: none;
-}
-
-.flex-control-nav {
-	position: absolute;
-	bottom: 14%;
-	z-index: 10;
-	li a {
-		background: #fff;
-		&:hover {
-			background: #fff;
-		}
-		&.flex-active {
-			background: $bg-orange;
-			cursor: pointer;
-		}
-	}
-}
-
-.flex-control-paging li a {
-	box-shadow: none;
-}
-
-/* =========================================================================
  * Main Navigation Bar
  * =========================================================================
  */
 
+$main-nav-height: 60px;
+$main-nav-background-color: #18191B;
 $nav-link-active-color: #d3bd98;
+$nav-main-padding-lr: 13px;
 
-nav > div {
-	display: inline-block;
+%nav-main-padding {
+	padding: 0 $nav-main-padding-lr;
+}
+
+%nav-dropdown-padding {
+	padding: 12px 18px;
+}
+
+%nav-main-text {
+	font: 11px "Open Sans", sans-serif;
+	font-weight: 100;
+	letter-spacing: 2px;
 }
 
 #main-navbar {
-	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: $main-nav-height;
+	background-color: $main-nav-background-color;
+	z-index: 8;
+	& > div {
+		display: inline-block;
+		height: $main-nav-height;
+		line-height: $main-nav-height;
+	}
 }
 
 .nav-brand {
-
+	display: block;
+	margin-left: 25px;
+	// logo
+	img {
+		width: auto;
+		height: $main-nav-height / 2;
+		vertical-align: middle;
+	}
 }
 
 .nav-mobile-toggle {
@@ -101,34 +116,86 @@ nav > div {
 
 .nav-main-menu {
 	list-style: none;
+	margin: 0 25px 0 0;
 }
 
-.nav-main-item {
-	display: inline-block;
-	a {
-		color: #fff;
-	}
-	a:hover,
-	a:active {
+.nav-main-link {
+	@extend %nav-main-text;
+	color: #fff;
+	text-decoration: none;
+	transition: all .4s ease-in-out;
+	&:hover,
+	&:active {
 		color: $nav-link-active-color;
 	}
 }
 
+.nav-main-item {
+	display: inline-block;
+	@extend %nav-main-padding;
+}
+
 .nav-dropdown-header {
+	@extend %nav-main-text;
+	@extend %nav-dropdown-padding;
 	color: #777;
 }
 
-.has-dropdown:hover {
-	& > .nav-dropdown-menu {
+.has-dropdown {
+	position: relative;
+	&:hover > .nav-dropdown-menu {
 		display: block;
 	}
 }
 
 .nav-dropdown-menu {
 	display: none;
+	position: absolute;
+	min-width: 210px;
+	margin-left: - $nav-main-padding-lr;
+	padding: 10px 0;
 	list-style: none;
+	background-color: $main-nav-background-color;
+	z-index: 9;
 }
 
 .nav-dropdown-item {
-
+	@extend %nav-dropdown-padding;
+	&:hover {
+		background-color: #000;
+	}
 }
+
+/* =========================================================================
+ * Header
+ * =========================================================================
+ */
+
+header {
+	margin-top: $main-nav-height;
+}
+
+.flexslider {
+	border: none;
+}
+
+.flex-control-nav {
+	position: absolute;
+	bottom: 14%;
+	z-index: 7;
+	li a {
+		background: #fff;
+		&:hover {
+			background: #fff;
+		}
+		&.flex-active {
+			background: $bg-orange;
+			cursor: pointer;
+		}
+	}
+}
+
+.flex-control-paging li a {
+	box-shadow: none;
+}
+
