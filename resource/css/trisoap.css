@@ -222,12 +222,17 @@
 }
 /* =========================================================================
  * Header
+ * 1. Jumbotron
  * =========================================================================
  */
 header {
   margin-top: 60px;
 }
 
+/* -------------------------------------------------------------------------
+ * 1. Jumbotron
+ * -------------------------------------------------------------------------
+ */
 .flexslider {
   border: none;
 }
@@ -252,6 +257,46 @@ header {
   box-shadow: none;
 }
 
+/* =========================================================================
+ * Footer
+ * =========================================================================
+ */
+footer {
+  background-color: #F18C41;
+  color: #fff;
+}
+footer .fa {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.footer-menu a {
+  display: block;
+}
+
+.footer-title {
+  font-size: 12px;
+}
+
+.footer-main-link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.footer-main-link:hover {
+  color: #000;
+}
+.footer-main-link:hover .fa {
+  color: #000;
+}
+
+/* Laptop */
+@media screen and (min-width: 980px) {
+  footer {
+    display: grid;
+  }
+}
+/* Mobile */
 /* =========================================================================
  * Contents
  * 0. Shared Properties

@@ -258,15 +258,20 @@ $nav-toggle-span-height: 2px;
 	}
 }
 
-
 /* =========================================================================
  * Header
+ * 1. Jumbotron
  * =========================================================================
  */
 
 header {
 	margin-top: $main-nav-height;
 }
+
+/* -------------------------------------------------------------------------
+ * 1. Jumbotron
+ * -------------------------------------------------------------------------
+ */
 
 .flexslider {
 	border: none;
@@ -290,6 +295,55 @@ header {
 
 .flex-control-paging li a {
 	box-shadow: none;
+}
+
+/* =========================================================================
+ * Footer
+ * =========================================================================
+ */
+
+footer {
+
+	background-color: $bg-orange;
+	color: #fff;
+	.fa {
+		color: rgba(255, 255, 255, 0.5);
+		transition: all 0.3s ease;
+	}
+}
+
+.footer-menu {
+	a {
+		display: block;
+	}
+}
+
+.footer-title {
+	font-size: 12px;
+}
+
+.footer-main-link {
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	&:hover {
+		color: #000;
+		.fa {
+			color: #000;
+		}
+	}
+}
+
+ /* Laptop */
+@media screen and (min-width: 980px) {
+	footer {
+		display: grid;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 979px) {
+
 }
 
 /* =========================================================================
