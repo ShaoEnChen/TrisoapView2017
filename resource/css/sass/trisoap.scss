@@ -231,8 +231,8 @@ $nav-toggle-span-height: 2px;
 
 	.nav-main-item {
 		width: 100%;
-		line-height: $nav-main-item-height;
 		padding: 0 $nav-main-padding-mobile;
+		line-height: $nav-main-item-height;
 		&:hover {
 			background-color: #000;
 		}
@@ -248,8 +248,8 @@ $nav-toggle-span-height: 2px;
 	.nav-dropdown-item {
 		width: 100%;
 		height: $nav-dropdown-item-height;
-		line-height: $nav-dropdown-item-height;
 		box-sizing: border-box;
+		line-height: $nav-dropdown-item-height;
 		@extend %nav-dropdown-padding-mobile;
 	}
 
@@ -302,10 +302,18 @@ header {
  * =========================================================================
  */
 
-footer {
+$footer-title-font-size: 12px;
+// default -- $footer-text-font-size: 16px;
+$footer-font-weight: 100;
+$footer-line-height: 1.7;
 
+footer {
+	box-sizing: border-box;
+	padding: 40px 0 20px;
 	background-color: $bg-orange;
 	color: #fff;
+	font-weight: $footer-font-weight;
+	line-height: $footer-line-height;
 	.fa {
 		color: rgba(255, 255, 255, 0.5);
 		transition: all 0.3s ease;
@@ -319,10 +327,12 @@ footer {
 }
 
 .footer-title {
-	font-size: 12px;
+	margin: 20px auto;
+	font-size: $footer-title-font-size;
 }
 
 .footer-main-link {
+	margin-bottom: 6px;
 	text-decoration: none;
 	color: #fff;
 	transition: all 0.3s ease;
@@ -336,14 +346,41 @@ footer {
 
  /* Laptop */
 @media screen and (min-width: 980px) {
+	$footer-row-2-height: 60px;
+
 	footer {
 		display: grid;
+		grid-template-column: 8% 3fr 2fr 2fr 2fr 3fr 8%;
+		grid-template-row: auto 40px $footer-row-2-height;
+	}
+
+	@for $i from 1 through 4 {
+		.footer-menu:nth-child(#{$i}) {
+			grid-column: calc( 2 + #{$i} ) / span 1;	// out of 8
+			grid-row: 1 / 2;	// out of 4
+		}
+	}
+
+	#community {
+		grid-column: 2 / span 1;	// out of 8
+		grid-row: 3 / 4;	// out of 4
+		.footer-main-link {
+			line-height: $footer-row-2-height;
+		}
+	}
+
+	#copyright {
+		grid-column: 3 / span 3;	// out of 8
+		grid-row: 3 / 4;	// out of 4
 	}
 }
 
 /* Mobile */
 @media screen and (max-width: 979px) {
-
+	footer > div {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 /* =========================================================================
@@ -483,7 +520,7 @@ $buy-now-btn-width: 44%;
 	font-size: 16px;
 	font-weight: 200;
 	letter-spacing: 0.03em;
-	line-height: 1.7em;
+	line-height: 1.7;
 }
 
 /* Laptop */
