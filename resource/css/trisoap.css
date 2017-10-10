@@ -234,6 +234,7 @@ header {
  * -------------------------------------------------------------------------
  */
 .flexslider {
+  margin: 0;
   border: none;
 }
 
@@ -425,6 +426,7 @@ footer .fa {
     display: grid;
     grid-template-columns: 8% 15px auto 30px auto 15px 8%;
     grid-template-rows: 90px auto 90px;
+    align-items: center;
   }
 
   .buy-now:first-child {
@@ -477,18 +479,13 @@ footer .fa {
   .story {
     display: grid;
     grid-template-columns: 8% 6fr 1fr 5fr 8%;
-    grid-template-rows: 10% auto 10%;
+    grid-template-rows: 40px auto 40px;
+    align-items: center;
   }
 
   .story-img {
-    position: relative;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-  }
-  .story-img > img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .story-text {
