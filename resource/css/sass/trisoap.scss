@@ -18,8 +18,7 @@
 	font-family: sans-serif;
 }
 
-/* z-index Scale: 1 - 10 */
-/*
+/* z-index Scale: 1 - 10
  * 1:
  * 2:
  * 3:
@@ -55,7 +54,7 @@ $nav-main-padding-lr: 13px;
 $nav-toggle-span-height: 2px;
 
 %nav-main-text {
-	font-size: 11px;
+	font: 11px sans-serif;
 	font-weight: 100;
 	letter-spacing: 2px;
 }
@@ -148,7 +147,7 @@ $nav-toggle-span-height: 2px;
 	}
 }
 
-/* Laptop */
+// Laptop
 @media screen and (min-width: 980px) {
 	.nav-brand img {
 		height: $main-nav-height / 2;
@@ -197,7 +196,7 @@ $nav-toggle-span-height: 2px;
 	}
 }
 
-/* Mobile */
+// Mobile
 @media screen and (max-width: 979px) {
 	$nav-main-item-height: 50px;
 	$nav-dropdown-item-height: 40px;
@@ -270,8 +269,12 @@ header {
 
 /* -------------------------------------------------------------------------
  * 1. Jumbotron
+ * 1.1. Index Jumbotron - FlexSlider
+ * 1.2. Jumbotron - Img
  * -------------------------------------------------------------------------
  */
+
+/* 1.1. Index Jumbotron - FlexSlider */
 
 .flexslider {
 	margin: 0;
@@ -298,6 +301,43 @@ header {
 	box-shadow: none;
 }
 
+/* 1.2. Jumbotron - Img */
+
+$jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "contact", "cooperate", "guide", "message", "product-idea", "product-intro", "soapstring", "trial";
+
+@each $item in $jumbotron-list {
+	#jumbotron-#{$item} {
+		background-image: url(../img/jumbotrons/#{$item}.jpg);
+	}
+}
+
+.img-jumbotron {
+	width: 100vw;
+	height: 33.75vw;	// ( 486 / 1440 )
+	background-size: contain;
+	background-repeat: no-repeat;
+	h1 {
+		text-align: center;
+		font-weight: 100;
+		line-height: 33.75vw;
+		color: #fff;
+	}
+}
+
+// Laptop
+@media screen and (min-width: 980px) {
+	.img-jumbotron > h1 {
+		font-size: 60px;
+	}
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	.img-jumbotron > h1 {
+		font-size: 36px;
+	}
+}
+
 /* =========================================================================
  * Footer
  * =========================================================================
@@ -309,6 +349,7 @@ $footer-font-weight: 100;
 $footer-line-height: 1.7;
 
 footer {
+	width: 100%;
 	box-sizing: border-box;
 	padding: 40px 0 20px;
 	background-color: $bg-orange;
@@ -345,7 +386,7 @@ footer {
 	}
 }
 
- /* Laptop */
+// Laptop
 @media screen and (min-width: 980px) {
 	$footer-row-2-height: 60px;
 
@@ -376,7 +417,7 @@ footer {
 	}
 }
 
-/* Mobile */
+// Mobile
 @media screen and (max-width: 979px) {
 	footer > div {
 		width: 100%;
@@ -387,7 +428,7 @@ footer {
 /* =========================================================================
  * Contents
  * 0. Shared Properties
- * 1. Index
+ * 1. Index Page
  * =========================================================================
  */
 
@@ -425,14 +466,14 @@ footer {
 }
 
 /* -------------------------------------------------------------------------
- * 1. Index Content
- * 1.1 Buy Now Showcase
- * 1.2 Slogan
- * 1.3 3 Stories About Us
+ * 1. Index Page
+ * 1.1. Buy Now Showcase
+ * 1.2. Slogan
+ * 1.3. 3 Stories About Us
  * -------------------------------------------------------------------------
  */
 
-/* 1.1 Buy Now Showcase */
+/* 1.1. Buy Now Showcase */
 
 $buy-now-btn-width: 44%;
 
@@ -467,7 +508,7 @@ $buy-now-btn-width: 44%;
 	transition: all 1s ease;
 }
 
-/* Laptop */
+// Laptop
 @media screen and (min-width: 980px) {
 	.buy-now-wrap {
 		display: grid;
@@ -487,7 +528,7 @@ $buy-now-btn-width: 44%;
 	}
 }
 
-/* Mobile */
+// Mobile
 @media screen and (max-width: 979px) {
 	$buy-now-lr-margin: 15px;
 	.buy-now {
@@ -496,7 +537,8 @@ $buy-now-btn-width: 44%;
 	}
 }
 
-/* 1.2 Slogan */
+/* 1.2. Slogan */
+
 .slogan-wrap {
 	width: 100%;
 	box-sizing: border-box;
@@ -506,7 +548,7 @@ $buy-now-btn-width: 44%;
 	color: #fff;
 }
 
-/* 1.3 3 Stories About Us */
+/* 1.3. 3 Stories About Us */
 
 .story {
 	box-sizing: border-box;
@@ -525,7 +567,7 @@ $buy-now-btn-width: 44%;
 	line-height: 1.7;
 }
 
-/* Laptop */
+// Laptop
 @media screen and (min-width: 980px) {
 	.story {
 		display: grid;
@@ -545,7 +587,7 @@ $buy-now-btn-width: 44%;
 	}
 }
 
-/* Mobile */
+// Mobile
 @media screen and (max-width: 979px) {
 	$story-lr-margin: 8%;
 	.story-img,

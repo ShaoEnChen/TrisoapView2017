@@ -10,8 +10,7 @@
   font-family: sans-serif;
 }
 
-/* z-index Scale: 1 - 10 */
-/*
+/* z-index Scale: 1 - 10
  * 1:
  * 2:
  * 3:
@@ -36,7 +35,7 @@
  * =========================================================================
  */
 .nav-main-link, .nav-dropdown-header {
-  font-size: 11px;
+  font: 11px sans-serif;
   font-weight: 100;
   letter-spacing: 2px;
 }
@@ -126,7 +125,6 @@
   top: 35px;
 }
 
-/* Laptop */
 @media screen and (min-width: 980px) {
   .nav-brand img {
     height: 30px;
@@ -165,7 +163,6 @@
     z-index: 9;
   }
 }
-/* Mobile */
 @media screen and (max-width: 979px) {
   .nav-brand img {
     height: 20px;
@@ -231,8 +228,11 @@ header {
 
 /* -------------------------------------------------------------------------
  * 1. Jumbotron
+ * 1.1. Index Jumbotron - FlexSlider
+ * 1.2. Jumbotron - Img
  * -------------------------------------------------------------------------
  */
+/* 1.1. Index Jumbotron - FlexSlider */
 .flexslider {
   margin: 0;
   border: none;
@@ -258,11 +258,88 @@ header {
   box-shadow: none;
 }
 
+/* 1.2. Jumbotron - Img */
+#jumbotron-\[Route\] {
+  background-image: url(../img/jumbotrons/\[Route\].jpg);
+}
+
+#jumbotron-about-team {
+  background-image: url(../img/jumbotrons/about-team.jpg);
+}
+
+#jumbotron-about {
+  background-image: url(../img/jumbotrons/about.jpg);
+}
+
+#jumbotron-attitude {
+  background-image: url(../img/jumbotrons/attitude.jpg);
+}
+
+#jumbotron-buy {
+  background-image: url(../img/jumbotrons/buy.jpg);
+}
+
+#jumbotron-contact {
+  background-image: url(../img/jumbotrons/contact.jpg);
+}
+
+#jumbotron-cooperate {
+  background-image: url(../img/jumbotrons/cooperate.jpg);
+}
+
+#jumbotron-guide {
+  background-image: url(../img/jumbotrons/guide.jpg);
+}
+
+#jumbotron-message {
+  background-image: url(../img/jumbotrons/message.jpg);
+}
+
+#jumbotron-product-idea {
+  background-image: url(../img/jumbotrons/product-idea.jpg);
+}
+
+#jumbotron-product-intro {
+  background-image: url(../img/jumbotrons/product-intro.jpg);
+}
+
+#jumbotron-soapstring {
+  background-image: url(../img/jumbotrons/soapstring.jpg);
+}
+
+#jumbotron-trial {
+  background-image: url(../img/jumbotrons/trial.jpg);
+}
+
+.img-jumbotron {
+  width: 100vw;
+  height: 33.75vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.img-jumbotron h1 {
+  text-align: center;
+  font-weight: 100;
+  line-height: 33.75vw;
+  color: #fff;
+}
+
+@media screen and (min-width: 980px) {
+  .img-jumbotron > h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 979px) {
+  .img-jumbotron > h1 {
+    font-size: 36px;
+  }
+}
 /* =========================================================================
  * Footer
  * =========================================================================
  */
 footer {
+  width: 100%;
   box-sizing: border-box;
   padding: 40px 0 20px;
   background-color: #F18C41;
@@ -297,7 +374,6 @@ footer .fa {
   color: #000;
 }
 
-/* Laptop */
 @media screen and (min-width: 980px) {
   footer {
     display: grid;
@@ -338,7 +414,6 @@ footer .fa {
     grid-row: 3 / 4;
   }
 }
-/* Mobile */
 @media screen and (max-width: 979px) {
   footer > div {
     width: 100%;
@@ -348,7 +423,7 @@ footer .fa {
 /* =========================================================================
  * Contents
  * 0. Shared Properties
- * 1. Index
+ * 1. Index Page
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -383,13 +458,13 @@ footer .fa {
 }
 
 /* -------------------------------------------------------------------------
- * 1. Index Content
- * 1.1 Buy Now Showcase
- * 1.2 Slogan
- * 1.3 3 Stories About Us
+ * 1. Index Page
+ * 1.1. Buy Now Showcase
+ * 1.2. Slogan
+ * 1.3. 3 Stories About Us
  * -------------------------------------------------------------------------
  */
-/* 1.1 Buy Now Showcase */
+/* 1.1. Buy Now Showcase */
 .buy-now {
   position: relative;
   box-sizing: border-box;
@@ -420,7 +495,6 @@ footer .fa {
   transition: all 1s ease;
 }
 
-/* Laptop */
 @media screen and (min-width: 980px) {
   .buy-now-wrap {
     display: grid;
@@ -439,14 +513,13 @@ footer .fa {
     grid-row: 2 / 3;
   }
 }
-/* Mobile */
 @media screen and (max-width: 979px) {
   .buy-now {
     width: calc(100% - 2 * $buy-now-lr-margin);
     margin: 40px 15px;
   }
 }
-/* 1.2 Slogan */
+/* 1.2. Slogan */
 .slogan-wrap {
   width: 100%;
   box-sizing: border-box;
@@ -456,7 +529,7 @@ footer .fa {
   color: #fff;
 }
 
-/* 1.3 3 Stories About Us */
+/* 1.3. 3 Stories About Us */
 .story {
   box-sizing: border-box;
 }
@@ -474,7 +547,6 @@ footer .fa {
   line-height: 1.7;
 }
 
-/* Laptop */
 @media screen and (min-width: 980px) {
   .story {
     display: grid;
@@ -493,7 +565,6 @@ footer .fa {
     grid-row: 2 / 3;
   }
 }
-/* Mobile */
 @media screen and (max-width: 979px) {
   .story-img,
   .story-text {
