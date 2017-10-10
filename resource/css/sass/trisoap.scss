@@ -527,8 +527,8 @@ $buy-now-btn-width: 44%;
 @media screen and (min-width: 980px) {
 	.story {
 		display: grid;
-		grid-template-columns: 8% 42% 7% 35% 8%;
-		grid-template-rows: 60px auto 60px;
+		grid-template-columns: 8% 6fr 1fr 5fr 8%;	// 6 for img, 5 for text
+		grid-template-rows: 10% auto 10%;
 	}
 
 	.story-img {
@@ -553,15 +553,15 @@ $buy-now-btn-width: 44%;
 	$story-lr-margin: 8%;
 	.story-img,
 	.story-text {
-		width: 100% - 2 * $story-lr-margin;
+		width: 84%;
 	}
 
 	.story-img {
-		margin: 60px $story-lr-margin 30px;
+		margin: 60px auto 30px;
 	}
 
 	.story-text {
-		margin: 30px $story-lr-margin 60px;
+		margin: 30px auto 60px;
 		text-align: center;
 	}
 }
