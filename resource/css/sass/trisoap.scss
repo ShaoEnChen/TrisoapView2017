@@ -492,7 +492,7 @@ $buy-now-btn-width: 44%;
 	$buy-now-lr-margin: 15px;
 	.buy-now {
 		width: calc(100% - 2 * $buy-now-lr-margin);
-		margin: 0 $buy-now-lr-margin 40px;
+		margin: 40px $buy-now-lr-margin;
 	}
 }
 
