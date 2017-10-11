@@ -316,7 +316,7 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 	height: 33.75vw;	// ( 486 / 1440 )
 	background-size: contain;
 	background-repeat: no-repeat;
-	h1, h4, .header-btn {
+	h1, h4, .jumbotron-btn {
 		display: block;
 		margin: 0 auto;
 		text-align: center;
@@ -328,7 +328,7 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 		padding-top: 3.75vw;	// 1
 		line-height: 14vw;		// 2
 	}
-	h4, .header-btn {
+	h4, .jumbotron-btn {
 		padding-bottom: 4vw;	// 3
 		line-height: 12vw;		// 4
 	}
