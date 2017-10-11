@@ -316,25 +316,45 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 	height: 33.75vw;	// ( 486 / 1440 )
 	background-size: contain;
 	background-repeat: no-repeat;
-	h1 {
+	h1, h4, .header-btn {
+		display: block;
+		margin: 0 auto;
 		text-align: center;
 		font-weight: 100;
-		line-height: 33.75vw;
 		color: #fff;
+	}
+	// 1 + 2 + 3 + 4 = 33.75vw
+	h1 {
+		padding-top: 3.75vw;	// 1
+		line-height: 14vw;		// 2
+	}
+	h4, .header-btn {
+		padding-bottom: 4vw;	// 3
+		line-height: 12vw;		// 4
 	}
 }
 
 // Laptop
 @media screen and (min-width: 980px) {
-	.img-jumbotron > h1 {
-		font-size: 60px;
+	.img-jumbotron {
+		& > h1 {
+			font-size: 60px;
+		}
+		& > h4 {
+			font-size: 24px;
+		}
 	}
 }
 
 // Mobile
 @media screen and (max-width: 979px) {
-	.img-jumbotron > h1 {
-		font-size: 36px;
+	.img-jumbotron {
+		& > h1 {
+			font-size: 36px;
+		}
+		& > h4 {
+			font-size: 16px;
+		}
 	}
 }
 

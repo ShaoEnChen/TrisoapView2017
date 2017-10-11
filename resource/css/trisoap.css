@@ -318,21 +318,36 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.img-jumbotron h1 {
+.img-jumbotron h1, .img-jumbotron h4, .img-jumbotron .header-btn {
+  display: block;
+  margin: 0 auto;
   text-align: center;
   font-weight: 100;
-  line-height: 33.75vw;
   color: #fff;
+}
+.img-jumbotron h1 {
+  padding-top: 3.75vw;
+  line-height: 14vw;
+}
+.img-jumbotron h4, .img-jumbotron .header-btn {
+  padding-bottom: 4vw;
+  line-height: 12vw;
 }
 
 @media screen and (min-width: 980px) {
   .img-jumbotron > h1 {
     font-size: 60px;
   }
+  .img-jumbotron > h4 {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 979px) {
   .img-jumbotron > h1 {
     font-size: 36px;
+  }
+  .img-jumbotron > h4 {
+    font-size: 16px;
   }
 }
 /* =========================================================================
