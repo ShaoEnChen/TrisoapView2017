@@ -456,7 +456,7 @@ footer .fa {
 }
 
 .slogan-title {
-  letter-spacing: 3px;
+  letter-spacing: 3.24px;
 }
 
 /* -------------------------------------------------------------------------
@@ -545,7 +545,7 @@ footer .fa {
   color: #555;
   font-size: 16px;
   font-weight: 200;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.48px;
   line-height: 1.7;
 }
 
@@ -598,8 +598,13 @@ footer .fa {
 .intro-text {
   color: #555;
   font-weight: 200;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.48px;
   line-height: 1.7;
+}
+.intro-text h3 {
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 3.24px;
 }
 
 @media screen and (min-width: 980px) {
