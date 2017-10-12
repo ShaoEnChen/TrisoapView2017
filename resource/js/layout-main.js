@@ -20,10 +20,16 @@ $navItemHasDropdown.click(function() {
  * =======================================
  */
 
-$('.flexslider').flexslider({
+$('#index-header > .flexslider').flexslider({
 	animation: 'fade',
 	directionNav: false,
 	slideshowSpeed: 8000,
 	animationSpeed: 1000,
 });
 
+$('#trial-recommend > .flexslider').flexslider({
+	animation: "slide",
+	controlNav: false,
+	slideshowSpeed: 4000,
+	animationSpeed: 600,
+});
