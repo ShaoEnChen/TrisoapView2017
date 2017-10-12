@@ -312,7 +312,7 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 
 @each $item in $jumbotron-list {
 	#jumbotron-#{$item} {
-		background-image: url(../img/jumbotrons/#{$item}.jpg);
+		background-image: url(../img/jumbotrons/#{$item}.png);
 	}
 }
 
@@ -321,13 +321,13 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 	height: 33.75vw;	// ( 486 / 1440 )
 	background-size: contain;
 	background-repeat: no-repeat;
+	text-align: center;
 }
 
 .jumbotron-title,
 .jumbotron-subtitle {
 	display: block;
 	margin: 0 auto;
-	text-align: center;
 	color: #fff;
 	font-weight: 100;
 }
@@ -339,13 +339,10 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 }
 
 // h4 and .jumbotron-btn SHOULD NOT appear at the same time.
-.jumbotron-subtitle, .jumbotron-btn {
+.jumbotron-subtitle,
+.jumbotron-btn {
 	padding-bottom: 4vw;	// 3
 	line-height: 12vw;		// 4
-}
-
-.jumbotron-btn > .primary-btn {
-
 }
 
 // Laptop
@@ -357,15 +354,25 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 	.jumbotron-subtitle {
 		font-size: 24px;
 	}
+
+	.jumbotron-btn > .primary-btn {
+		padding: 16px 36px;
+		font-size: 18px;
+	}
 }
 
 // Mobile
 @media screen and (max-width: 979px) {
 	.jumbotron-title {
-		font-size: 36px;
+		font-size: 32px;
 	}
 
 	.jumbotron-subtitle {
+		font-size: 16px;
+	}
+
+	.jumbotron-btn > .primary-btn {
+		padding: 8px 25px;
 		font-size: 16px;
 	}
 }
@@ -493,9 +500,9 @@ a.no-href {
 }
 
 .primary-btn {
-	display: block;
 	box-sizing: border-box;
 	border: solid 1px #fff;
+	text-decoration: none;
 	text-align: center;
 	color: #fff;
 	transition: all .3s ease;
@@ -523,7 +530,8 @@ $buy-now-btn-width: 44%;
 	&:hover > .hover-cover {
 		opacity: 1;
 	}
-	> .primary-btn {
+	.primary-btn {
+		display: block;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);

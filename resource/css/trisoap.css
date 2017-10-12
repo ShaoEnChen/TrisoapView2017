@@ -266,55 +266,55 @@ header {
 
 /* 1.2. Jumbotron - Img */
 #jumbotron-\[Route\] {
-  background-image: url(../img/jumbotrons/\[Route\].jpg);
+  background-image: url(../img/jumbotrons/\[Route\].png);
 }
 
 #jumbotron-about-team {
-  background-image: url(../img/jumbotrons/about-team.jpg);
+  background-image: url(../img/jumbotrons/about-team.png);
 }
 
 #jumbotron-about {
-  background-image: url(../img/jumbotrons/about.jpg);
+  background-image: url(../img/jumbotrons/about.png);
 }
 
 #jumbotron-attitude {
-  background-image: url(../img/jumbotrons/attitude.jpg);
+  background-image: url(../img/jumbotrons/attitude.png);
 }
 
 #jumbotron-buy {
-  background-image: url(../img/jumbotrons/buy.jpg);
+  background-image: url(../img/jumbotrons/buy.png);
 }
 
 #jumbotron-contact {
-  background-image: url(../img/jumbotrons/contact.jpg);
+  background-image: url(../img/jumbotrons/contact.png);
 }
 
 #jumbotron-cooperate {
-  background-image: url(../img/jumbotrons/cooperate.jpg);
+  background-image: url(../img/jumbotrons/cooperate.png);
 }
 
 #jumbotron-guide {
-  background-image: url(../img/jumbotrons/guide.jpg);
+  background-image: url(../img/jumbotrons/guide.png);
 }
 
 #jumbotron-message {
-  background-image: url(../img/jumbotrons/message.jpg);
+  background-image: url(../img/jumbotrons/message.png);
 }
 
 #jumbotron-product-idea {
-  background-image: url(../img/jumbotrons/product-idea.jpg);
+  background-image: url(../img/jumbotrons/product-idea.png);
 }
 
 #jumbotron-product-intro {
-  background-image: url(../img/jumbotrons/product-intro.jpg);
+  background-image: url(../img/jumbotrons/product-intro.png);
 }
 
 #jumbotron-soapstring {
-  background-image: url(../img/jumbotrons/soapstring.jpg);
+  background-image: url(../img/jumbotrons/soapstring.png);
 }
 
 #jumbotron-trial {
-  background-image: url(../img/jumbotrons/trial.jpg);
+  background-image: url(../img/jumbotrons/trial.png);
 }
 
 .img-jumbotron {
@@ -322,13 +322,13 @@ header {
   height: 33.75vw;
   background-size: contain;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .jumbotron-title,
 .jumbotron-subtitle {
   display: block;
   margin: 0 auto;
-  text-align: center;
   color: #fff;
   font-weight: 100;
 }
@@ -338,7 +338,8 @@ header {
   line-height: 14vw;
 }
 
-.jumbotron-subtitle, .jumbotron-btn {
+.jumbotron-subtitle,
+.jumbotron-btn {
   padding-bottom: 4vw;
   line-height: 12vw;
 }
@@ -351,13 +352,23 @@ header {
   .jumbotron-subtitle {
     font-size: 24px;
   }
+
+  .jumbotron-btn > .primary-btn {
+    padding: 16px 36px;
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 979px) {
   .jumbotron-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .jumbotron-subtitle {
+    font-size: 16px;
+  }
+
+  .jumbotron-btn > .primary-btn {
+    padding: 8px 25px;
     font-size: 16px;
   }
 }
@@ -482,9 +493,9 @@ a.no-href {
 }
 
 .primary-btn {
-  display: block;
   box-sizing: border-box;
   border: solid 1px #fff;
+  text-decoration: none;
   text-align: center;
   color: #fff;
   transition: all .3s ease;
@@ -509,7 +520,8 @@ a.no-href {
 .buy-now:hover > .hover-cover {
   opacity: 1;
 }
-.buy-now > .primary-btn {
+.buy-now .primary-btn {
+  display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
