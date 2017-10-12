@@ -807,9 +807,26 @@ $media-lr-margin: 8%;
 #trial-recommend {
 	color: #555;
 	& > .flexslider {
+		text-align: center;
+	}
+}
+
+// Laptop
+@media screen and (min-width: 980px) {
+	#trial-recommend > .flexslider {
 		width: 60%;
 		margin: 70px auto 25px;
-		text-align: center;
+	}
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	#trial-recommend {
+		width: 84%;
+		margin: 0 auto;
+		& > .flexslider {
+			margin: 25px auto;
+		}
 	}
 }
 
@@ -817,4 +834,53 @@ $media-lr-margin: 8%;
 
 /* 4.3. 3 Main Features */
 
+.feature-wrap {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12vh 16%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #fff;
+	overflow: auto;
+}
 
+#feature1 {
+	background-image: url(../img/trial/feature1.png);
+}
+
+#feature2 {
+	background-image: url(../img/trial/feature2.png);
+}
+
+#feature3 {
+	background-image: url(../img/trial/feature3.png);
+}
+
+.feature-title {
+	margin: 0;
+	padding-bottom: 5vh;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 4.32px;
+	line-height: 1.5;
+}
+
+.feature-text {
+	margin: 0;
+	white-space: pre-line;
+	font-weight: 200;
+	line-height: 1.7;
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	.feature-title {
+		font-size: 16px;
+	}
+
+	.feature-text {
+		font-size: 12px;
+	}
+}

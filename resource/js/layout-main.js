@@ -16,7 +16,7 @@ $navItemHasDropdown.click(function() {
 });
 
 /* =======================================
- * Header - flexslider initialization
+ * 首頁 Header - flexslider initialization
  * =======================================
  */
 
@@ -27,8 +27,14 @@ $('#index-header > .flexslider').flexslider({
 	animationSpeed: 1000,
 });
 
+/* =======================================
+ * 試用品申請｜Trial - flexslider initialization
+ * =======================================
+ */
+
 $('#trial-recommend > .flexslider').flexslider({
 	animation: "slide",
+	directionNav: false,
 	controlNav: false,
 	slideshowSpeed: 4000,
 	animationSpeed: 600,
