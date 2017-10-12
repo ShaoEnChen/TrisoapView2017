@@ -18,17 +18,19 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 	font-family: sans-serif;
 }
 
-/* z-index Scale: 1 - 10
- * 1:
- * 2:
- * 3:
- * 4:
- * 5:
- * 6:
- * 7: .flex-control-nav
- * 8: #main-navbar
- * 9: .nav-dropdown-menu
- * 10:
+/* z-index Scale: -1 - 10
+ * -1: .img-jumbotron::before
+ *  0: .img-jumbotron
+ *  1:
+ *  2:
+ *  3:
+ *  4:
+ *  5:
+ *  6:
+ *  7: .flex-control-nav
+ *  8: #main-navbar
+ *  9: .nav-dropdown-menu
+ *  10:
  */
 
 $bg-orange: #F18C41;
@@ -312,16 +314,30 @@ $jumbotron-list: "\\[Route\\]", "about-team", "about", "attitude", "buy", "conta
 
 @each $item in $jumbotron-list {
 	#jumbotron-#{$item} {
-		background-image: url(../img/jumbotrons/#{$item}.png);
+		background-image: url(../img/jumbotrons/#{$item}.jpg);
 	}
 }
 
 .img-jumbotron {
+	position: relative;
 	width: 100vw;
 	height: 33.75vw;	// ( 486 / 1440 )
 	background-size: contain;
 	background-repeat: no-repeat;
 	text-align: center;
+	z-index: 0;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
 }
 
 .jumbotron-title,
