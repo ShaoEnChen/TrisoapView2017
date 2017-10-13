@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
  */
 
 $bg-orange: #F18C41;
+$main-font-color: #555;
 
 /* =========================================================================
  * Preloader
@@ -487,6 +488,7 @@ $footer-line-height: 1.7;
  * 2. 三三堅持｜Product Intro
  * 3. 媒體報導｜Media
  * 4. 試用品申請｜Trial
+ * 5. 顧客問答（常見問題）｜FAQ
  * =========================================================================
  */
 
@@ -501,7 +503,7 @@ a.no-href {
 
 .main-content-title {
 	margin-bottom: 35px;
-	color: #555;
+	color: $main-font-color;
 	font-weight: 200;
 	letter-spacing: 4.32px;
 }
@@ -536,6 +538,30 @@ a.no-href {
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.7);
 		color: #666;
+	}
+}
+
+// JQuery UI Accordion
+.ui-accordion-header {
+	font-weight: normal;
+	color: $main-font-color;
+	outline: 0;
+}
+
+.ui-accordion-header:hover,
+.ui-accordion-header-active {
+	font-weight: bold;
+	color: #000;
+}
+
+.ui-accordion-content {
+	font-weight: 200;
+}
+
+// Laptop
+@media screen and (min-width: 980px) {
+	.ui-accordion-header:not(.ui-accordion-header-active):hover {
+		text-align: center;
 	}
 }
 
@@ -628,7 +654,7 @@ $buy-now-btn-width: 44%;
 }
 
 .story-text {
-	color: #555;
+	color: $main-font-color;
 	font-size: 16px;
 	font-weight: 200;
 	letter-spacing: 0.48px;
@@ -689,7 +715,7 @@ $buy-now-btn-width: 44%;
 }
 
 .intro-text {
-	color: #555;
+	color: $main-font-color;
 	font-weight: 200;
 	letter-spacing: 0.48px;
 	line-height: 1.7;
@@ -805,7 +831,7 @@ $media-lr-margin: 8%;
 /* 4.1. Recommendation - Flexslider */
 
 #trial-recommend {
-	color: #555;
+	color: $main-font-color;
 	& > .flexslider {
 		text-align: center;
 	}
@@ -884,3 +910,15 @@ $media-lr-margin: 8%;
 		font-size: 12px;
 	}
 }
+
+/* -------------------------------------------------------------------------
+ * 5. 顧客問答（常見問題）｜FAQ
+ * -------------------------------------------------------------------------
+ */
+
+#faq-accordion {
+	margin: 60px 8%;
+	/* Accordion - Shared Properties */
+}
+
+

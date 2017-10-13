@@ -9,5 +9,9 @@ if(!isset($_GET['route'])) {	// index
 else {
 	include_once('jumbotron.html');
 	include_once('content/' . $_GET['route'] . '.html');
+	if($_GET['route'] === 'faq') {
+		echo '<link href="resource/js/jquery-ui-accordion/jquery-ui.min.css" rel="stylesheet">';
+		echo '<script src="resource/js/jquery-ui-accordion/jquery-ui.min.js" defer></script>';
+	}
 }
 include_once('footer.html');

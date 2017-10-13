@@ -483,6 +483,7 @@ header {
  * 2. 三三堅持｜Product Intro
  * 3. 媒體報導｜Media
  * 4. 試用品申請｜Trial
+ * 5. 顧客問答（常見問題）｜FAQ
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -532,6 +533,27 @@ a.no-href {
   color: #666;
 }
 
+.ui-accordion-header {
+  font-weight: normal;
+  color: #555;
+  outline: 0;
+}
+
+.ui-accordion-header:hover,
+.ui-accordion-header-active {
+  font-weight: bold;
+  color: #000;
+}
+
+.ui-accordion-content {
+  font-weight: 200;
+}
+
+@media screen and (min-width: 980px) {
+  .ui-accordion-header:not(.ui-accordion-header-active):hover {
+    text-align: center;
+  }
+}
 /* -------------------------------------------------------------------------
  * 1. 首頁｜Index Page
  * 1.1. Buy Now Showcase
@@ -837,4 +859,12 @@ a.no-href {
   .feature-text {
     font-size: 12px;
   }
+}
+/* -------------------------------------------------------------------------
+ * 5. 顧客問答（常見問題）｜FAQ
+ * -------------------------------------------------------------------------
+ */
+#faq-accordion {
+  margin: 60px 8%;
+  /* Accordion - Shared Properties */
 }
