@@ -560,6 +560,7 @@ a.no-href {
 
 // Laptop
 @media screen and (min-width: 980px) {
+	.ui-accordion-header-active,
 	.ui-accordion-header:not(.ui-accordion-header-active):hover {
 		text-align: center;
 	}
