@@ -489,6 +489,7 @@ $footer-line-height: 1.7;
  * 3. 媒體報導｜Media
  * 4. 試用品申請｜Trial
  * 5. 顧客問答（常見問題）｜FAQ
+ * 6. 合作夥伴｜Partner
  * =========================================================================
  */
 
@@ -556,14 +557,6 @@ a.no-href {
 
 .ui-accordion-content {
 	font-weight: 200;
-}
-
-// Laptop
-@media screen and (min-width: 980px) {
-	.ui-accordion-header-active,
-	.ui-accordion-header:not(.ui-accordion-header-active):hover {
-		text-align: center;
-	}
 }
 
 /* -------------------------------------------------------------------------
@@ -920,6 +913,46 @@ $media-lr-margin: 8%;
 #faq-accordion {
 	margin: 60px 8%;
 	/* Accordion - Shared Properties */
+	// Laptop
+	@media screen and (min-width: 980px) {
+		.ui-accordion-header-active,
+		.ui-accordion-header:not(.ui-accordion-header-active):hover {
+			text-align: center;
+		}
+	}
 }
 
+/* -------------------------------------------------------------------------
+ * 6. 合作夥伴｜Partner
+ * -------------------------------------------------------------------------
+ */
 
+ #partner-accordion {
+ 	margin: 60px 8%;
+
+ 	/* Accordion - Shared Properties */
+	& > .accordion {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+ 	.primary-btn {
+ 		border: solid 1px #000;
+ 		padding: 8px 25px;
+		color: #000;
+		&:hover {
+			border-color: #777;
+			color: #777;
+		}
+ 	}
+ }
+
+.partner-logo {
+	max-width: 150px;
+	height: auto;
+}
+
+// for those partners without logo img
+.partner-text:first-child {
+	margin-top: 0;
+}

@@ -484,6 +484,7 @@ header {
  * 3. 媒體報導｜Media
  * 4. 試用品申請｜Trial
  * 5. 顧客問答（常見問題）｜FAQ
+ * 6. 合作夥伴｜Partner
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -549,12 +550,6 @@ a.no-href {
   font-weight: 200;
 }
 
-@media screen and (min-width: 980px) {
-  .ui-accordion-header-active,
-  .ui-accordion-header:not(.ui-accordion-header-active):hover {
-    text-align: center;
-  }
-}
 /* -------------------------------------------------------------------------
  * 1. 首頁｜Index Page
  * 1.1. Buy Now Showcase
@@ -868,4 +863,41 @@ a.no-href {
 #faq-accordion {
   margin: 60px 8%;
   /* Accordion - Shared Properties */
+}
+@media screen and (min-width: 980px) {
+  #faq-accordion .ui-accordion-header-active,
+  #faq-accordion .ui-accordion-header:not(.ui-accordion-header-active):hover {
+    text-align: center;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * 6. 合作夥伴｜Partner
+ * -------------------------------------------------------------------------
+ */
+#partner-accordion {
+  margin: 60px 8%;
+  /* Accordion - Shared Properties */
+}
+#partner-accordion > .accordion {
+  padding-left: 0;
+  padding-right: 0;
+}
+#partner-accordion .primary-btn {
+  border: solid 1px #000;
+  padding: 8px 25px;
+  color: #000;
+}
+#partner-accordion .primary-btn:hover {
+  border-color: #777;
+  color: #777;
+}
+
+.partner-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.partner-text:first-child {
+  margin-top: 0;
 }
