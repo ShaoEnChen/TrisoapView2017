@@ -2,6 +2,7 @@
 /*
  * Import fonts
  */
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
 /* =========================================================================
  * CSS Normalization
  * =========================================================================
@@ -485,6 +486,7 @@ header {
  * 4. 試用品申請｜Trial
  * 5. 顧客問答（常見問題）｜FAQ
  * 6. 合作夥伴｜Partner
+ * 7. 三三團隊｜About
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -510,7 +512,7 @@ a.no-href {
   color: #fff;
 }
 
-.slogan, .slogan-title {
+.slogan {
   white-space: pre-line;
   text-align: center;
   font-weight: 200;
@@ -518,6 +520,10 @@ a.no-href {
 }
 
 .slogan-title {
+  white-space: pre-line;
+  text-align: center;
+  font-weight: 200;
+  line-height: 1.5;
   letter-spacing: 3.24px;
 }
 
@@ -548,6 +554,13 @@ a.no-href {
 
 .ui-accordion-content {
   font-weight: 200;
+}
+
+.trisoap-signature {
+  font-family: "Great Vibes", sans-serif;
+  font-weight: normal;
+  transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
 }
 
 /* -------------------------------------------------------------------------
@@ -900,4 +913,115 @@ a.no-href {
 
 .partner-text:first-child {
   margin-top: 0;
+}
+
+/* -------------------------------------------------------------------------
+ * 7. 三三團隊｜About
+ * -------------------------------------------------------------------------
+ */
+/* 理念 #about-concept */
+#about-concept-text {
+  color: #555;
+  font-weight: 200;
+  letter-spacing: 0.48px;
+  line-height: 1.7;
+}
+#about-concept-text > .trisoap-signature {
+  margin-top: 0;
+}
+
+#about-concept-title {
+  font-weight: 200;
+}
+
+#about-concept-img {
+  width: 100%;
+  height: auto;
+}
+
+/* 團隊 #about-team */
+#about-team {
+  color: #555;
+}
+
+.about-team-member-img {
+  width: 100%;
+  height: auto;
+}
+
+.about-team-member-text {
+  text-align: center;
+  letter-spacing: 3.24px;
+  line-height: 1.7;
+  font-weight: 200;
+}
+
+.about-team-member-title,
+.about-team-member-subtitle {
+  font-weight: 200;
+}
+
+@media screen and (min-width: 980px) {
+  /* 理念 #about-concept */
+  #about-concept {
+    display: grid;
+    grid-template-columns: 12% 6fr 6fr 8%;
+    grid-template-rows: 40px auto 40px;
+    align-items: center;
+  }
+
+  #about-concept-text {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #about-concept-img-wrap {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  /* 團隊 #about-team */
+  .about-team-member {
+    display: grid;
+    grid-template-columns: 12% 9fr 1fr 9fr 12%;
+    grid-template-rows: 40px auto 40px;
+    align-items: center;
+  }
+
+  .about-team-member-img-wrap {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .about-team-member-text {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+}
+@media screen and (max-width: 979px) {
+  #about-concept-img-wrap,
+  #about-concept-text,
+  #about-team {
+    width: 76%;
+  }
+
+  #about-concept-text {
+    margin: 60px auto 30px;
+  }
+
+  #about-concept-img-wrap,
+  #about-team {
+    margin: 30px auto;
+  }
+
+  #about-concept-title,
+  .trisoap-signature {
+    text-align: center;
+  }
+
+  /* 團隊 #about-team */
+  #about-team > .slogan {
+    text-align: start;
+    white-space: initial;
+  }
 }

@@ -6,6 +6,7 @@
 // @import url(//fonts.googleapis.com/css?family=Kanit:400,200,100,300,500,600,700,800,900);
 // @import url(//fonts.googleapis.com/css?family=Raleway);
 // @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
 /* =========================================================================
  * CSS Normalization
@@ -490,6 +491,7 @@ $footer-line-height: 1.7;
  * 4. 試用品申請｜Trial
  * 5. 顧客問答（常見問題）｜FAQ
  * 6. 合作夥伴｜Partner
+ * 7. 三三團隊｜About
  * =========================================================================
  */
 
@@ -525,7 +527,10 @@ a.no-href {
 }
 
 .slogan-title {
-	@extend .slogan;
+	white-space: pre-line;
+	text-align: center;
+	font-weight: 200;
+	line-height: 1.5;
 	letter-spacing: 3.24px;
 }
 
@@ -557,6 +562,13 @@ a.no-href {
 
 .ui-accordion-content {
 	font-weight: 200;
+}
+
+.trisoap-signature {
+	font-family: "Great Vibes", sans-serif;
+    font-weight: normal;
+    transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
 }
 
 /* -------------------------------------------------------------------------
@@ -628,6 +640,7 @@ $buy-now-btn-width: 44%;
 // Mobile
 @media screen and (max-width: 979px) {
 	$buy-now-lr-margin: 15px;
+
 	.buy-now {
 		width: calc(100% - 2 * $buy-now-lr-margin);
 		margin: 40px $buy-now-lr-margin;
@@ -678,6 +691,7 @@ $buy-now-btn-width: 44%;
 // Mobile
 @media screen and (max-width: 979px) {
 	$story-lr-margin: 8%;
+
 	.story-img-wrap,
 	.story-text {
 		width: 100% - 2 * $story-lr-margin;
@@ -764,6 +778,7 @@ $buy-now-btn-width: 44%;
 // Mobile
 @media screen and (max-width: 979px) {
 	$intro-lr-margin: 8%;
+
 	.intro-img-wrap,
 	.intro-text {
 		width: 100% - 2 * $intro-lr-margin;
@@ -956,3 +971,127 @@ $media-lr-margin: 8%;
 .partner-text:first-child {
 	margin-top: 0;
 }
+
+/* -------------------------------------------------------------------------
+ * 7. 三三團隊｜About
+ * -------------------------------------------------------------------------
+ */
+
+/* 理念 #about-concept */
+
+#about-concept-text {
+	color: $main-font-color;
+	font-weight: 200;
+	letter-spacing: 0.48px;
+	line-height: 1.7;
+	& > .trisoap-signature {
+		margin-top: 0;
+	}
+}
+
+#about-concept-title {
+	font-weight: 200;
+}
+
+#about-concept-img {
+	width: 100%;
+	height: auto;
+}
+
+/* 團隊 #about-team */
+
+#about-team {
+	color: $main-font-color;
+}
+
+.about-team-member-img {
+	width: 100%;
+	height: auto;
+}
+
+.about-team-member-text {
+	text-align: center;
+	letter-spacing: 3.24px;
+	line-height: 1.7;
+	font-weight: 200;
+}
+
+.about-team-member-title,
+.about-team-member-subtitle {
+	font-weight: 200;
+}
+
+// Laptop
+@media screen and (min-width: 980px) {
+	/* 理念 #about-concept */
+	#about-concept {
+		display: grid;
+		grid-template-columns: 12% 6fr 6fr 8%;
+		grid-template-rows: 40px auto 40px;
+		align-items: center;
+	}
+
+	#about-concept-text {
+		grid-column: 2 / 3;	// out of 5
+		grid-row: 2 / 3;	// out of 4
+	}
+
+	#about-concept-img-wrap {
+		grid-column: 3 / 4;	// out of 5
+		grid-row: 2 / 3;	// out of 4
+	}
+
+	/* 團隊 #about-team */
+
+	.about-team-member {
+		display: grid;
+		grid-template-columns: 12% 9fr 1fr 9fr 12%;
+		grid-template-rows: 40px auto 40px;
+		align-items: center;
+	}
+
+	.about-team-member-img-wrap {
+		grid-column: 2 / 3;	// out of 6
+		grid-row: 2 / 3;	// out of 4
+	}
+
+	.about-team-member-text {
+		grid-column: 4 / 5;	// out of 6
+		grid-row: 2 / 3;	// out of 4
+	}
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	$about-concept-lr-margin: 12%;
+
+	#about-concept-img-wrap,
+	#about-concept-text,
+	#about-team {
+		width: 100% - 2 * $about-concept-lr-margin;
+	}
+
+	#about-concept-text {
+		margin: 60px auto 30px;
+	}
+
+	#about-concept-img-wrap,
+	#about-team {
+		margin: 30px auto;
+	}
+
+	#about-concept-title,
+	.trisoap-signature {
+		text-align: center;
+	}
+
+	/* 團隊 #about-team */
+
+	#about-team {
+		& > .slogan {
+			text-align: start;
+			white-space: initial;
+		}
+	}
+}
+
