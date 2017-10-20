@@ -487,6 +487,7 @@ header {
  * 5. 顧客問答（常見問題）｜FAQ
  * 6. 合作夥伴｜Partner
  * 7. 三三團隊｜About
+ * 8. 聯絡我們｜Contact
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -507,7 +508,8 @@ a.no-href {
 .main-content-subtitle {
   color: #555;
   font-weight: 200;
-  letter-spacing: 4.32px;
+  line-height: 1.7;
+  letter-spacing: 0.48px;
 }
 
 .slogan-wrap {
@@ -571,12 +573,12 @@ a.no-href {
 
 /* -------------------------------------------------------------------------
  * 1. 首頁｜Index Page
- * 1.1. Buy Now Showcase
- * 1.2. Slogan
- * 1.3. 3 Stories About Us
+ * 1.1. 立即購買
+ * 1.2. 三個故事 Slogan
+ * 1.3. 三個故事
  * -------------------------------------------------------------------------
  */
-/* 1.1. Buy Now Showcase */
+/* 1.1. 立即購買 */
 .buy-now {
   position: relative;
   box-sizing: border-box;
@@ -635,8 +637,8 @@ a.no-href {
     margin: 40px 15px;
   }
 }
-/* 1.2. Slogan - Shared Properties */
-/* 1.3. 3 Stories About Us */
+/* 1.2. 三個故事 Slogan - Shared Slogan Properties */
+/* 1.3. 三個故事 */
 .story {
   box-sizing: border-box;
 }
@@ -794,12 +796,12 @@ a.no-href {
 }
 /* -------------------------------------------------------------------------
  * 4. 試用品申請｜Trial
- * 4.1. Recommendation - Flexslider
+ * 4.1. 一致好評 - Flexslider
  * 4.2. Slogan
  * 4.3. 3 Main Features
  * -------------------------------------------------------------------------
  */
-/* 4.1. Recommendation - Flexslider */
+/* 4.1. 一致好評 - Flexslider */
 #trial-recommend {
   padding: 40px 0;
   color: #555;
@@ -823,7 +825,7 @@ a.no-href {
     margin: 25px auto;
   }
 }
-/* 4.2. Slogan - Shared Properties */
+/* 4.2. Shared Slogan Properties */
 /* 4.3. 3 Main Features */
 .feature-wrap {
   width: 100%;
@@ -923,9 +925,11 @@ a.no-href {
 
 /* -------------------------------------------------------------------------
  * 7. 三三團隊｜About
+ * 7.1. 理念
+ * 7.2. 團隊
  * -------------------------------------------------------------------------
  */
-/* 理念 #about-concept */
+/* 7.1. 理念 */
 #about-concept-text {
   color: #555;
   font-weight: 200;
@@ -941,7 +945,7 @@ a.no-href {
   height: auto;
 }
 
-/* 團隊 #about-team */
+/* 7.2. 團隊 */
 #about-team {
   color: #555;
 }
@@ -964,7 +968,7 @@ a.no-href {
 }
 
 @media screen and (min-width: 980px) {
-  /* 理念 #about-concept */
+  /* 7.1. 理念 */
   #about-concept {
     display: grid;
     grid-template-columns: 12% 6fr 6fr 8%;
@@ -982,7 +986,7 @@ a.no-href {
     grid-row: 2 / 3;
   }
 
-  /* 團隊 #about-team */
+  /* 7.2. 團隊 */
   .about-team-member {
     display: grid;
     grid-template-columns: 12% 9fr 1fr 9fr 12%;
@@ -1007,13 +1011,14 @@ a.no-href {
     width: 76%;
   }
 
-  #about-concept-text {
-    margin: 60px auto 30px;
-  }
-
   #about-concept-img-wrap,
   #about-team {
     margin: 30px auto;
+  }
+
+  /* 7.1. 理念 */
+  #about-concept-text {
+    margin: 60px auto 30px;
   }
 
   #about-concept-title,
@@ -1021,7 +1026,7 @@ a.no-href {
     text-align: center;
   }
 
-  /* 團隊 #about-team */
+  /* 7.2. 團隊 */
   #about-team > .slogan {
     white-space: initial;
     text-align: start;
@@ -1031,3 +1036,7 @@ a.no-href {
     margin: 30px auto;
   }
 }
+/* -------------------------------------------------------------------------
+ * 8. 聯絡我們｜Contact
+ * -------------------------------------------------------------------------
+ */
