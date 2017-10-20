@@ -498,6 +498,10 @@ a.no-href {
   cursor: default;
 }
 
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #contact-subject {
+  margin: 60px 8%;
+}
+
 .main-content-title {
   margin-bottom: 35px;
   color: #555;
@@ -772,10 +776,6 @@ a.no-href {
  * 3. 媒體報導｜Media
  * -------------------------------------------------------------------------
  */
-#media-wrap {
-  margin: 60px 8%;
-}
-
 .media-link {
   text-decoration: none;
 }
@@ -882,7 +882,6 @@ a.no-href {
  * -------------------------------------------------------------------------
  */
 #faq-accordion {
-  margin: 60px 8%;
   /* Accordion - Shared Properties */
 }
 @media screen and (min-width: 980px) {
@@ -897,7 +896,6 @@ a.no-href {
  * -------------------------------------------------------------------------
  */
 #partner-accordion {
-  margin: 60px 8%;
   /* Accordion - Shared Properties */
 }
 #partner-accordion > .accordion {

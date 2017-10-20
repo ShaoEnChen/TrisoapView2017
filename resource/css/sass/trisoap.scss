@@ -510,6 +510,10 @@ a.no-href {
 	cursor: default;
 }
 
+.main-wrap {
+	margin: 60px $wrap-lr-margin;
+}
+
 .main-content-title {
 	margin-bottom: 35px;
 	color: $main-font-color;
@@ -813,7 +817,7 @@ $buy-now-btn-width: 44%;
  */
 
 #media-wrap {
-	margin: 60px $wrap-lr-margin;
+	@extend .main-wrap;
 }
 
 .media-link {
@@ -937,7 +941,7 @@ $buy-now-btn-width: 44%;
  */
 
 #faq-accordion {
-	margin: 60px $wrap-lr-margin;
+	@extend .main-wrap;
 	/* Accordion - Shared Properties */
 	// Laptop
 	@media screen and (min-width: 980px) {
@@ -954,7 +958,7 @@ $buy-now-btn-width: 44%;
  */
 
  #partner-accordion {
- 	margin: 60px $wrap-lr-margin;
+ 	@extend .main-wrap;
 
  	/* Accordion - Shared Properties */
 	& > .accordion {
@@ -1116,5 +1120,5 @@ $buy-now-btn-width: 44%;
  */
 
 #contact-subject {
-
+	@extend .main-wrap;
 }
