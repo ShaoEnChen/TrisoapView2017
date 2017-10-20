@@ -501,6 +501,9 @@ $footer-line-height: 1.7;
  */
 
 $wrap-lr-margin: 8%;
+$letter-spacing-16-27: 4.32px;
+$letter-spacing-18-18: 3.24px;
+$letter-spacing-16-003: 0.48px;
 
 a.no-href {
 	cursor: default;
@@ -510,7 +513,13 @@ a.no-href {
 	margin-bottom: 35px;
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: 4.32px;
+	letter-spacing: $letter-spacing-16-27;
+}
+
+.main-content-subtitle {
+	color: $main-font-color;
+	font-weight: 200;
+	letter-spacing: $letter-spacing-16-27;
 }
 
 .slogan-wrap {
@@ -533,7 +542,7 @@ a.no-href {
 	text-align: center;
 	font-weight: 200;
 	line-height: 1.5;
-	letter-spacing: 3.24px;
+	letter-spacing: $letter-spacing-18-18;
 }
 
 .primary-btn {
@@ -666,7 +675,7 @@ $buy-now-btn-width: 44%;
 	color: $main-font-color;
 	font-size: 16px;
 	font-weight: 200;
-	letter-spacing: 0.48px;
+	letter-spacing: $letter-spacing-16-003;
 	line-height: 1.7;
 }
 
@@ -727,12 +736,12 @@ $buy-now-btn-width: 44%;
 .intro-text {
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: 0.48px;
+	letter-spacing: $letter-spacing-16-003;
 	line-height: 1.7;
 	h3 {
 		text-align: center;
 		font-weight: 200;
-		letter-spacing: 3.24px;
+		letter-spacing: $letter-spacing-18-18;
 	}
 }
 
@@ -897,7 +906,7 @@ $buy-now-btn-width: 44%;
 	padding-bottom: 5vh;
 	text-align: center;
 	font-weight: 200;
-	letter-spacing: 4.32px;
+	letter-spacing: $letter-spacing-16-27;
 	line-height: 1.5;
 }
 
@@ -982,7 +991,7 @@ $buy-now-btn-width: 44%;
 #about-concept-text {
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: 0.48px;
+	letter-spacing: $letter-spacing-16-003;
 	line-height: 1.7;
 	& > .trisoap-signature {
 		margin-top: 0;
@@ -1007,7 +1016,7 @@ $buy-now-btn-width: 44%;
 
 .about-team-member-text {
 	text-align: center;
-	letter-spacing: 3.24px;
+	letter-spacing: $letter-spacing-18-18;
 	line-height: 1.7;
 	font-weight: 200;
 }

@@ -504,6 +504,12 @@ a.no-href {
   letter-spacing: 4.32px;
 }
 
+.main-content-subtitle {
+  color: #555;
+  font-weight: 200;
+  letter-spacing: 4.32px;
+}
+
 .slogan-wrap {
   width: 100%;
   box-sizing: border-box;
