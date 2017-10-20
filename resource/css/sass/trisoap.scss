@@ -500,6 +500,8 @@ $footer-line-height: 1.7;
  * -------------------------------------------------------------------------
  */
 
+$wrap-lr-margin: 8%;
+
 a.no-href {
 	cursor: default;
 }
@@ -799,12 +801,8 @@ $buy-now-btn-width: 44%;
  * -------------------------------------------------------------------------
  */
 
-$media-lr-margin: 8%;
-
 .media-wrap {
-	width: 100% - 2 * $media-lr-margin;
-	margin: 0 auto;
-	padding: 90px 0;
+	margin: 60px $wrap-lr-margin;
 }
 
 .media-link {
@@ -840,6 +838,7 @@ $media-lr-margin: 8%;
 /* 4.1. Recommendation - Flexslider */
 
 #trial-recommend {
+	padding: 40px 0;
 	color: $main-font-color;
 	& > .flexslider {
 		text-align: center;
@@ -850,7 +849,7 @@ $media-lr-margin: 8%;
 @media screen and (min-width: 980px) {
 	#trial-recommend > .flexslider {
 		width: 60%;
-		margin: 70px auto 25px;
+		margin: 0 auto;
 	}
 }
 
@@ -905,6 +904,7 @@ $media-lr-margin: 8%;
 .feature-text {
 	margin: 0;
 	white-space: pre-line;
+	text-align: center;
 	font-weight: 200;
 	line-height: 1.7;
 }
@@ -926,7 +926,7 @@ $media-lr-margin: 8%;
  */
 
 #faq-accordion {
-	margin: 60px 8%;
+	margin: 60px $wrap-lr-margin;
 	/* Accordion - Shared Properties */
 	// Laptop
 	@media screen and (min-width: 980px) {
@@ -943,7 +943,7 @@ $media-lr-margin: 8%;
  */
 
  #partner-accordion {
- 	margin: 60px 8%;
+ 	margin: 60px $wrap-lr-margin;
 
  	/* Accordion - Shared Properties */
 	& > .accordion {
@@ -987,10 +987,6 @@ $media-lr-margin: 8%;
 	& > .trisoap-signature {
 		margin-top: 0;
 	}
-}
-
-#about-concept-title {
-	font-weight: 200;
 }
 
 #about-concept-img {
@@ -1089,9 +1085,13 @@ $media-lr-margin: 8%;
 
 	#about-team {
 		& > .slogan {
-			text-align: start;
 			white-space: initial;
+			text-align: start;
 		}
+	}
+
+	.about-team-member {
+		margin: 30px auto;
 	}
 }
 

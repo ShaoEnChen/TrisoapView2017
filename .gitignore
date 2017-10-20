@@ -1,3 +1,4 @@
 .DS_Store
 resource/img
 resource/database.php
+resource/.sass-cache/*

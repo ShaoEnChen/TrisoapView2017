@@ -765,9 +765,7 @@ a.no-href {
  * -------------------------------------------------------------------------
  */
 .media-wrap {
-  width: 84%;
-  margin: 0 auto;
-  padding: 90px 0;
+  margin: 60px 8%;
 }
 
 .media-link {
@@ -797,6 +795,7 @@ a.no-href {
  */
 /* 4.1. Recommendation - Flexslider */
 #trial-recommend {
+  padding: 40px 0;
   color: #555;
 }
 #trial-recommend > .flexslider {
@@ -806,7 +805,7 @@ a.no-href {
 @media screen and (min-width: 980px) {
   #trial-recommend > .flexslider {
     width: 60%;
-    margin: 70px auto 25px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 979px) {
@@ -856,6 +855,7 @@ a.no-href {
 .feature-text {
   margin: 0;
   white-space: pre-line;
+  text-align: center;
   font-weight: 200;
   line-height: 1.7;
 }
@@ -928,10 +928,6 @@ a.no-href {
 }
 #about-concept-text > .trisoap-signature {
   margin-top: 0;
-}
-
-#about-concept-title {
-  font-weight: 200;
 }
 
 #about-concept-img {
@@ -1021,7 +1017,11 @@ a.no-href {
 
   /* 團隊 #about-team */
   #about-team > .slogan {
-    text-align: start;
     white-space: initial;
+    text-align: start;
+  }
+
+  .about-team-member {
+    margin: 30px auto;
   }
 }
