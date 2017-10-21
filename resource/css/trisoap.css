@@ -559,7 +559,7 @@ a.no-href {
   border: solid 1px #000;
   text-decoration: none;
   text-align: center;
-  background-color: default;
+  background-color: transparent;
   color: #000;
   transition: all .3s ease;
   padding: 8px 25px;
@@ -568,6 +568,21 @@ a.no-href {
   border-color: #777;
   background-color: transparent;
   color: #777;
+}
+
+.submit-btn {
+  box-sizing: border-box;
+  border: solid 1px #000;
+  text-decoration: none;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  transition: all .3s ease;
+  padding: 10px 35px;
+}
+.submit-btn:hover {
+  border-color: #777;
+  background-color: #777;
 }
 
 .ui-accordion-header {
