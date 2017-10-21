@@ -679,11 +679,8 @@ $buy-now-btn-width: 44%;
 
 // Mobile
 @media screen and (max-width: 979px) {
-	$buy-now-lr-margin: 15px;
-
 	.buy-now {
-		width: calc(100% - 2 * $buy-now-lr-margin);
-		margin: 40px $buy-now-lr-margin;
+		margin: 40px 15px;
 	}
 }
 
@@ -732,17 +729,12 @@ $buy-now-btn-width: 44%;
 @media screen and (max-width: 979px) {
 	$story-lr-margin: 8%;
 
-	.story-img-wrap,
-	.story-text {
-		width: 100% - 2 * $story-lr-margin;
-	}
-
 	.story-img-wrap {
-		margin: 60px auto 30px;
+		margin: 60px $story-lr-margin 30px;
 	}
 
 	.story-text {
-		margin: 30px auto 60px;
+		margin: 30px $story-lr-margin 60px;
 		text-align: center;
 	}
 }
@@ -819,17 +811,12 @@ $buy-now-btn-width: 44%;
 @media screen and (max-width: 979px) {
 	$intro-lr-margin: 8%;
 
-	.intro-img-wrap,
-	.intro-text {
-		width: 100% - 2 * $intro-lr-margin;
-	}
-
 	.intro-img-wrap {
-		margin: 60px auto 30px;
+		margin: 60px $intro-lr-margin 30px;
 	}
 
 	.intro-text {
-		margin: 30px auto 60px;
+		margin: 30px $intro-lr-margin 60px;
 		text-align: center;
 	}
 }
@@ -1089,23 +1076,17 @@ $buy-now-btn-width: 44%;
 
 // Mobile
 @media screen and (max-width: 979px) {
-	$about-concept-lr-margin: 12%;
-
-	#about-concept-img-wrap,
-	#about-concept-text,
-	#about-team {
-		width: 100% - 2 * $about-concept-lr-margin;
-	}
+	$about-concept-lr-margin: 8%;
 
 	#about-concept-img-wrap,
 	#about-team {
-		margin: 30px auto;
+		margin: 30px $about-concept-lr-margin;
 	}
 
 	/* 7.1. 理念 */
 
 	#about-concept-text {
-		margin: 60px auto 30px;
+		margin: 60px $about-concept-lr-margin 30px;
 	}
 
 	#about-concept-title,
@@ -1136,6 +1117,44 @@ $buy-now-btn-width: 44%;
 	@extend .main-wrap;
 }
 
-#contact {
-	@extend .main-wrap;
+#contact-form-name,
+#contact-form-email,
+#contact-form-phone,
+#contact-form-message,
+#contact-form .submit-btn {
+	display: block;
+}
+
+// Laptop
+@media screen and (min-width: 980px) {
+	#contact {
+		display: grid;
+		grid-template-columns: 8% 2fr 1fr 8%;
+		grid-template-rows: 40px auto 40px;
+		align-items: center;
+	}
+
+	#contact-map {
+		grid-column: 2 / 3;	// out of 5
+		grid-row: 2 / 3;	// out of 4
+	}
+
+	#contact-form {
+		grid-column: 3 / 4;	// out of 5
+		grid-row: 2 / 3;	// out of 4
+	}
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	$contact-lr-margin: 8%;
+
+	#contact {
+		margin: 40px $contact-lr-margin;
+	}
+
+	#contact-map,
+	#contact-form {
+
+	}
 }

@@ -498,7 +498,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #contact-subject, #contact {
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #contact-subject {
   margin: 60px 8%;
 }
 
@@ -670,7 +670,6 @@ a.no-href {
 }
 @media screen and (max-width: 979px) {
   .buy-now {
-    width: calc(100% - 2 * $buy-now-lr-margin);
     margin: 40px 15px;
   }
 }
@@ -712,17 +711,12 @@ a.no-href {
   }
 }
 @media screen and (max-width: 979px) {
-  .story-img-wrap,
-  .story-text {
-    width: 84%;
-  }
-
   .story-img-wrap {
-    margin: 60px auto 30px;
+    margin: 60px 8% 30px;
   }
 
   .story-text {
-    margin: 30px auto 60px;
+    margin: 30px 8% 60px;
     text-align: center;
   }
 }
@@ -791,17 +785,12 @@ a.no-href {
   }
 }
 @media screen and (max-width: 979px) {
-  .intro-img-wrap,
-  .intro-text {
-    width: 84%;
-  }
-
   .intro-img-wrap {
-    margin: 60px auto 30px;
+    margin: 60px 8% 30px;
   }
 
   .intro-text {
-    margin: 30px auto 60px;
+    margin: 30px 8% 60px;
     text-align: center;
   }
 }
@@ -1028,19 +1017,13 @@ a.no-href {
 }
 @media screen and (max-width: 979px) {
   #about-concept-img-wrap,
-  #about-concept-text,
   #about-team {
-    width: 76%;
-  }
-
-  #about-concept-img-wrap,
-  #about-team {
-    margin: 30px auto;
+    margin: 30px 8%;
   }
 
   /* 7.1. 理念 */
   #about-concept-text {
-    margin: 60px auto 30px;
+    margin: 60px 8% 30px;
   }
 
   #about-concept-title,
@@ -1062,3 +1045,34 @@ a.no-href {
  * 8. 聯絡我們｜Contact
  * -------------------------------------------------------------------------
  */
+#contact-form-name,
+#contact-form-email,
+#contact-form-phone,
+#contact-form-message,
+#contact-form .submit-btn {
+  display: block;
+}
+
+@media screen and (min-width: 980px) {
+  #contact {
+    display: grid;
+    grid-template-columns: 8% 2fr 1fr 8%;
+    grid-template-rows: 40px auto 40px;
+    align-items: center;
+  }
+
+  #contact-map {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #contact-form {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+@media screen and (max-width: 979px) {
+  #contact {
+    margin: 40px 8%;
+  }
+}
