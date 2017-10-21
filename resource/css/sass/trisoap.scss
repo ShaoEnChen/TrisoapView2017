@@ -505,6 +505,7 @@ $wrap-lr-margin: 8%;
 $letter-spacing-16-27: 4.32px;
 $letter-spacing-18-18: 3.24px;
 $letter-spacing-16-003: 0.48px;
+$translucent-white: rgba(255, 255, 255, 0.7);
 
 a.no-href {
 	cursor: default;
@@ -551,17 +552,28 @@ a.no-href {
 	letter-spacing: $letter-spacing-18-18;
 }
 
-.primary-btn {
+@mixin btn($border-color: #fff, $font-color: #fff, $background-color: transparent, $border-color-hover: $translucent-white, $font-color-hover: #666, $background-color-hover: $translucent-white) {
 	box-sizing: border-box;
-	border: solid 1px #fff;
+	border: solid 1px $border-color;
 	text-decoration: none;
 	text-align: center;
-	color: #fff;
+	background-color: $background-color;
+	color: $font-color;
 	transition: all .3s ease;
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.7);
-		color: #666;
+		border-color: $border-color-hover;
+		background-color: $background-color-hover;
+		color: $font-color-hover;
 	}
+}
+
+.primary-btn {
+	@include btn();
+}
+
+.text-btn {
+	@include btn(#000, #000, default, #777, #777, transparent);
+	padding: 8px 25px;
 }
 
 // JQuery UI Accordion
@@ -965,17 +977,7 @@ $buy-now-btn-width: 44%;
 		padding-left: 0;
 		padding-right: 0;
 	}
-
- 	.primary-btn {
- 		border: solid 1px #000;
- 		padding: 8px 25px;
-		color: #000;
-		&:hover {
-			border-color: #777;
-			color: #777;
-		}
- 	}
- }
+}
 
 .partner-logo {
 	max-width: 150px;
@@ -1120,5 +1122,9 @@ $buy-now-btn-width: 44%;
  */
 
 #contact-subject {
+	@extend .main-wrap;
+}
+
+#contact {
 	@extend .main-wrap;
 }
