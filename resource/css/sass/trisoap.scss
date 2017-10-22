@@ -1128,6 +1128,8 @@ $buy-now-btn-width: 44%;
 #contact-form-phone,
 #contact-form-message,
 #contact-form .submit-btn {
+	display: block;
+	width: 100%;
 	margin: 15px 0;
 }
 
@@ -1135,8 +1137,6 @@ $buy-now-btn-width: 44%;
 #contact-form-email,
 #contact-form-phone,
 #contact-form-message {
-	display: block;
-	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 24px;
 	border: solid 1px #ddd;
