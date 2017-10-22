@@ -588,6 +588,12 @@ a.no-href {
   background-color: #777;
 }
 
+.text-sep-min {
+  margin: 20px auto;
+  border: 1px #eee;
+  border-style: solid none none none;
+}
+
 .ui-accordion-header {
   font-weight: normal;
   color: #555;
@@ -1078,6 +1084,13 @@ a.no-href {
   font-size: 18px;
   font-weight: 200;
   line-height: 1.4;
+}
+
+#contact-info {
+  color: #555;
+  font-weight: 200;
+  letter-spacing: 0.48px;
+  line-height: 1.7;
 }
 
 @media screen and (min-width: 980px) {

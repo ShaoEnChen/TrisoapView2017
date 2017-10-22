@@ -588,6 +588,12 @@ a.no-href {
 	padding: 10px 35px;
 }
 
+.text-sep-min {
+	margin: 20px auto;
+	border: 1px #eee;
+	border-style: solid none none none;
+}
+
 // JQuery UI Accordion
 .ui-accordion-header {
 	font-weight: normal;
@@ -1148,6 +1154,13 @@ $buy-now-btn-width: 44%;
 
 #contact-form-message {
 	// resize: none;
+}
+
+#contact-info {
+	color: $main-font-color;
+	font-weight: 200;
+	letter-spacing: $letter-spacing-16-003;
+	line-height: 1.7;
 }
 
 // Laptop
