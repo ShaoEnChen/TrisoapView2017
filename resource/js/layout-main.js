@@ -40,28 +40,32 @@ $('#trial-recommend > .flexslider').flexslider({
 	animationSpeed: 600,
 });
 
-/* ===================================================
- * 顧客問答｜FAQ - jquery accordion initialization
- * ===================================================
- */
+// Initialize accordion if JQuery UI is Loaded.
+if(window.jQuery.ui) {
 
-$('#faq-accordion').accordion({
-	collapsible: true,
-	heightStyle: "content",
-});
+	/* ===================================================
+	 * 顧客問答｜FAQ - jquery accordion initialization
+	 * ===================================================
+	 */
 
-/* ===================================================
- * 合作夥伴｜Partner - jquery accordion initialization
- * ===================================================
- */
+	$('#faq-accordion').accordion({
+		collapsible: true,
+		heightStyle: "content",
+	});
 
-$('#partner-accordion').accordion({
-	collapsible: true,
-	heightStyle: "content",
-});
+	/* ===================================================
+	 * 合作夥伴｜Partner - jquery accordion initialization
+	 * ===================================================
+	 */
 
-// Nested Accordion
-$('#partner-accordion > .accordion').accordion({
-	collapsible: true,
-	heightStyle: "content",
-});
+	$('#partner-accordion').accordion({
+		collapsible: true,
+		heightStyle: "content",
+	});
+
+	// Nested Accordion
+	$('#partner-accordion > .accordion').accordion({
+		collapsible: true,
+		heightStyle: "content",
+	});
+}

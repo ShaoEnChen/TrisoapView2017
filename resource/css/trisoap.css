@@ -498,7 +498,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #contact-subject {
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion {
   margin: 60px 8%;
 }
 
@@ -547,6 +547,7 @@ a.no-href {
   background-color: transparent;
   color: #fff;
   transition: all .3s ease;
+  font-weight: 200;
 }
 .primary-btn:hover {
   border-color: rgba(255, 255, 255, 0.7);
@@ -562,6 +563,7 @@ a.no-href {
   background-color: transparent;
   color: #000;
   transition: all .3s ease;
+  font-weight: 200;
   padding: 8px 25px;
 }
 .text-btn:hover {
@@ -578,6 +580,7 @@ a.no-href {
   background-color: #000;
   color: #fff;
   transition: all .3s ease;
+  font-weight: 200;
   padding: 10px 35px;
 }
 .submit-btn:hover {
@@ -1045,23 +1048,48 @@ a.no-href {
  * 8. 聯絡我們｜Contact
  * -------------------------------------------------------------------------
  */
+#contact-subject {
+  margin: 60px 8% 0;
+}
+
+#contact-map,
+#contact-form {
+  margin: 0 15px;
+}
+
 #contact-form-name,
 #contact-form-email,
 #contact-form-phone,
 #contact-form-message,
 #contact-form .submit-btn {
+  margin: 15px 0;
+}
+
+#contact-form-name,
+#contact-form-email,
+#contact-form-phone,
+#contact-form-message {
   display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 24px;
+  border: solid 1px #ddd;
+  color: #555;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 980px) {
   #contact {
     display: grid;
     grid-template-columns: 8% 2fr 1fr 8%;
-    grid-template-rows: 40px auto 40px;
+    grid-template-rows: 60px auto 60px;
     align-items: center;
   }
 
   #contact-map {
+    height: 400px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
@@ -1074,5 +1102,9 @@ a.no-href {
 @media screen and (max-width: 979px) {
   #contact {
     margin: 40px 8%;
+  }
+
+  #contact-map {
+    height: 220px;
   }
 }

@@ -560,6 +560,7 @@ a.no-href {
 	background-color: $background-color;
 	color: $font-color;
 	transition: all .3s ease;
+	font-weight: 200;
 	&:hover {
 		@if $border-color-hover {
 			border-color: $border-color-hover;
@@ -1114,7 +1115,12 @@ $buy-now-btn-width: 44%;
  */
 
 #contact-subject {
-	@extend .main-wrap;
+	margin: 60px $wrap-lr-margin 0;
+}
+
+#contact-map,
+#contact-form {
+	margin: 0 15px;
 }
 
 #contact-form-name,
@@ -1122,7 +1128,26 @@ $buy-now-btn-width: 44%;
 #contact-form-phone,
 #contact-form-message,
 #contact-form .submit-btn {
+	margin: 15px 0;
+}
+
+#contact-form-name,
+#contact-form-email,
+#contact-form-phone,
+#contact-form-message {
 	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 24px;
+	border: solid 1px #ddd;
+	color: $main-font-color;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 1.4;
+}
+
+#contact-form-message {
+	// resize: none;
 }
 
 // Laptop
@@ -1130,11 +1155,12 @@ $buy-now-btn-width: 44%;
 	#contact {
 		display: grid;
 		grid-template-columns: 8% 2fr 1fr 8%;
-		grid-template-rows: 40px auto 40px;
+		grid-template-rows: 60px auto 60px;
 		align-items: center;
 	}
 
 	#contact-map {
+		height: 400px;
 		grid-column: 2 / 3;	// out of 5
 		grid-row: 2 / 3;	// out of 4
 	}
@@ -1153,8 +1179,7 @@ $buy-now-btn-width: 44%;
 		margin: 40px $contact-lr-margin;
 	}
 
-	#contact-map,
-	#contact-form {
-
+	#contact-map {
+		height: 220px;
 	}
 }
