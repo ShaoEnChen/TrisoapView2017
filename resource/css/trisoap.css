@@ -488,6 +488,7 @@ header {
  * 6. 合作夥伴｜Partner
  * 7. 三三團隊｜About
  * 8. 聯絡我們｜Contact
+ * 9. 購物須知｜Shopping Guide
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -498,7 +499,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion {
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide {
   margin: 60px 8%;
 }
 
@@ -513,7 +514,7 @@ a.no-href {
   color: #555;
   font-weight: 200;
   line-height: 1.7;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03em;
 }
 
 .slogan-wrap {
@@ -524,7 +525,7 @@ a.no-href {
   color: #fff;
 }
 
-.slogan {
+.slogan, .slogan-title {
   white-space: pre-line;
   text-align: center;
   font-weight: 200;
@@ -532,10 +533,6 @@ a.no-href {
 }
 
 .slogan-title {
-  white-space: pre-line;
-  text-align: center;
-  font-weight: 200;
-  line-height: 1.5;
   letter-spacing: 3.24px;
 }
 
@@ -588,10 +585,18 @@ a.no-href {
   background-color: #777;
 }
 
-.text-sep-min {
-  margin: 20px auto;
-  border: 1px #eee;
+.text-sep-sm {
+  border-width: 1px;
+  border-color: #eee;
   border-style: solid none none none;
+  margin: 20px auto;
+}
+
+.text-sep-md {
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: solid none none none;
+  margin: 30px auto;
 }
 
 .ui-accordion-header {
@@ -697,7 +702,7 @@ a.no-href {
   color: #555;
   font-size: 16px;
   font-weight: 200;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03em;
   line-height: 1.7;
 }
 
@@ -745,7 +750,7 @@ a.no-href {
 .intro-text {
   color: #555;
   font-weight: 200;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03em;
   line-height: 1.7;
 }
 .intro-text h3 {
@@ -953,7 +958,7 @@ a.no-href {
 #about-concept-text {
   color: #555;
   font-weight: 200;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03em;
   line-height: 1.7;
 }
 #about-concept-text > .trisoap-signature {
@@ -1041,7 +1046,7 @@ a.no-href {
   }
 
   /* 7.2. 團隊 */
-  #about-team > .slogan {
+  #about-team > .slogan, #about-team > .slogan-title {
     white-space: initial;
     text-align: start;
   }
@@ -1089,7 +1094,7 @@ a.no-href {
 #contact-info {
   color: #555;
   font-weight: 200;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03em;
   line-height: 1.7;
 }
 
@@ -1120,4 +1125,50 @@ a.no-href {
   #contact-map {
     height: 220px;
   }
+}
+/* -------------------------------------------------------------------------
+ * 9. 購物須知｜Shopping Guide
+ * -------------------------------------------------------------------------
+ */
+#guide {
+  color: #555;
+}
+
+.guide-anchor,
+.guide-link {
+  text-decoration: none;
+  color: #EA8B3B;
+  font-weight: 200;
+}
+
+#guide-content {
+  padding: 0 8%;
+}
+
+.guide-title {
+  margin-bottom: 35px;
+  color: #000;
+  font-weight: normal;
+  letter-spacing: 0.18em;
+}
+
+.guide-subtitle {
+  margin-bottom: 20px;
+  font-weight: 200;
+  letter-spacing: 0.18em;
+}
+
+.guide-icon {
+  width: 25px;
+  height: auto;
+}
+
+.guide-text {
+  margin-bottom: 35px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+#shop-guide {
+  margin-top: 40px;
 }

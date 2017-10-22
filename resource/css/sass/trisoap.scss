@@ -493,6 +493,7 @@ $footer-line-height: 1.7;
  * 6. 合作夥伴｜Partner
  * 7. 三三團隊｜About
  * 8. 聯絡我們｜Contact
+ * 9. 購物須知｜Shopping Guide
  * =========================================================================
  */
 
@@ -502,9 +503,7 @@ $footer-line-height: 1.7;
  */
 
 $wrap-lr-margin: 8%;
-$letter-spacing-16-27: 4.32px;
 $letter-spacing-18-18: 3.24px;
-$letter-spacing-16-003: 0.48px;
 $translucent-white: rgba(255, 255, 255, 0.7);
 
 a.no-href {
@@ -519,14 +518,14 @@ a.no-href {
 	margin-bottom: 35px;
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-27;
+	letter-spacing: 4.32px;
 }
 
 .main-content-subtitle {
 	color: $main-font-color;
 	font-weight: 200;
 	line-height: 1.7;
-	letter-spacing: $letter-spacing-16-003;
+	letter-spacing: 0.03em;
 }
 
 .slogan-wrap {
@@ -545,10 +544,7 @@ a.no-href {
 }
 
 .slogan-title {
-	white-space: pre-line;
-	text-align: center;
-	font-weight: 200;
-	line-height: 1.5;
+	@extend .slogan;
 	letter-spacing: $letter-spacing-18-18;
 }
 
@@ -588,10 +584,22 @@ a.no-href {
 	padding: 10px 35px;
 }
 
-.text-sep-min {
-	margin: 20px auto;
-	border: 1px #eee;
+
+// hr tags
+@mixin text-sep($border-color) {
+	border-width: 1px;
+	border-color: $border-color;
 	border-style: solid none none none;
+}
+
+.text-sep-sm {
+	@include text-sep(#eee);
+	margin: 20px auto;
+}
+
+.text-sep-md {
+	@include text-sep(#ccc);
+	margin: 30px auto;
 }
 
 // JQuery UI Accordion
@@ -708,7 +716,7 @@ $buy-now-btn-width: 44%;
 	color: $main-font-color;
 	font-size: 16px;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-003;
+	letter-spacing: 0.03em;
 	line-height: 1.7;
 }
 
@@ -764,7 +772,7 @@ $buy-now-btn-width: 44%;
 .intro-text {
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-003;
+	letter-spacing: 0.03em;
 	line-height: 1.7;
 	h3 {
 		text-align: center;
@@ -929,7 +937,7 @@ $buy-now-btn-width: 44%;
 	padding-bottom: 5vh;
 	text-align: center;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-27;
+	letter-spacing: 4.32px;
 	line-height: 1.5;
 }
 
@@ -1006,7 +1014,7 @@ $buy-now-btn-width: 44%;
 #about-concept-text {
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-003;
+	letter-spacing: 0.03em;
 	line-height: 1.7;
 	& > .trisoap-signature {
 		margin-top: 0;
@@ -1159,7 +1167,7 @@ $buy-now-btn-width: 44%;
 #contact-info {
 	color: $main-font-color;
 	font-weight: 200;
-	letter-spacing: $letter-spacing-16-003;
+	letter-spacing: 0.03em;
 	line-height: 1.7;
 }
 
@@ -1195,4 +1203,53 @@ $buy-now-btn-width: 44%;
 	#contact-map {
 		height: 220px;
 	}
+}
+
+/* -------------------------------------------------------------------------
+ * 9. 購物須知｜Shopping Guide
+ * -------------------------------------------------------------------------
+ */
+
+#guide {
+	@extend .main-wrap;
+	color: $main-font-color;
+}
+
+.guide-anchor,
+.guide-link {
+	text-decoration: none;
+	color: #EA8B3B;
+	font-weight: 200;
+}
+
+#guide-content {
+	padding: 0 $wrap-lr-margin;
+}
+
+.guide-title {
+	margin-bottom: 35px;
+	color: #000;
+	font-weight: normal;
+	letter-spacing: 0.18em;
+}
+
+.guide-subtitle {
+	margin-bottom: 20px;
+	font-weight: 200;
+	letter-spacing: 0.18em;
+}
+
+.guide-icon {
+	width: 25px;
+	height: auto;
+}
+
+.guide-text {
+	margin-bottom: 35px;
+	line-height: 1.7;
+	letter-spacing: 0.03em;
+}
+
+#shop-guide {
+	margin-top: 40px;
 }
