@@ -501,7 +501,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide-wrap {
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide-wrap, .products-wrap {
   margin: 60px 8%;
 }
 
@@ -528,7 +528,6 @@ a.no-href {
 }
 
 .slogan, .slogan-title {
-  white-space: pre-line;
   text-align: center;
   font-weight: 200;
   line-height: 1.5;
@@ -900,7 +899,6 @@ a.no-href {
 
 .feature-text {
   margin: 0;
-  white-space: pre-line;
   text-align: center;
   font-weight: 200;
   line-height: 1.7;
@@ -1046,7 +1044,6 @@ a.no-href {
 
   /* 7.2. 團隊 */
   #about-team > .slogan, #about-team > .slogan-title {
-    white-space: initial;
     text-align: start;
   }
 
@@ -1176,3 +1173,10 @@ a.no-href {
  * 10. 單品 / 旅用皂絲｜Soap / Soapstring
  * -------------------------------------------------------------------------
  */
+.products-wrap > .slogan-title {
+  margin: 35px auto;
+}
+.products-wrap > .slogan, .products-wrap > .slogan-title {
+  color: #555;
+  line-height: 1.7;
+}

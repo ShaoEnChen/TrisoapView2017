@@ -539,7 +539,6 @@ a.no-href {
 }
 
 .slogan {
-	white-space: pre-line;
 	text-align: center;
 	font-weight: 200;
 	line-height: 1.5;
@@ -945,7 +944,6 @@ $buy-now-btn-width: 44%;
 
 .feature-text {
 	margin: 0;
-	white-space: pre-line;
 	text-align: center;
 	font-weight: 200;
 	line-height: 1.7;
@@ -1111,7 +1109,6 @@ $buy-now-btn-width: 44%;
 
 	#about-team {
 		& > .slogan {
-			white-space: initial;
 			text-align: start;
 		}
 	}
@@ -1256,5 +1253,16 @@ $buy-now-btn-width: 44%;
  * 10. 單品 / 旅用皂絲｜Soap / Soapstring
  * -------------------------------------------------------------------------
  */
+
+.products-wrap {
+	@extend .main-wrap;
+	& > .slogan-title {
+		margin: 35px auto;
+	}
+	& > .slogan {
+		color: $main-font-color;
+		line-height: 1.7;
+	}
+}
 
 
