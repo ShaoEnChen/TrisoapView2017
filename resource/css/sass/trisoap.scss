@@ -119,6 +119,7 @@ $nav-toggle-span-height: 2px;
 .nav-dropdown-header {
 	@extend %nav-main-text;
 	color: #777;
+	cursor: default;
 }
 
 .nav-dropdown-menu {
@@ -494,6 +495,7 @@ $footer-line-height: 1.7;
  * 7. 三三團隊｜About
  * 8. 聯絡我們｜Contact
  * 9. 購物須知｜Shopping Guide
+ * 10. 單品 / 旅用皂絲｜Soap / Soapstring
  * =========================================================================
  */
 
@@ -1249,4 +1251,10 @@ $buy-now-btn-width: 44%;
 #shop-guide {
 	margin-top: 40px;
 }
+
+/* -------------------------------------------------------------------------
+ * 10. 單品 / 旅用皂絲｜Soap / Soapstring
+ * -------------------------------------------------------------------------
+ */
+
 
