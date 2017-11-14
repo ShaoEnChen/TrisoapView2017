@@ -3,7 +3,7 @@
 include_once('header.html');
 include_once('nav.html');
 if(!isset($_GET['route'])) {	// index
-	include_once('jumbotron_index.html');
+	include_once('index_header.html');
 	include_once('content/index.html');
 }
 else {
