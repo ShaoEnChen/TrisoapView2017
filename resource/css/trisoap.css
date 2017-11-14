@@ -1018,6 +1018,9 @@ a.no-href {
     grid-template-rows: 40px auto 40px;
     align-items: center;
   }
+  .about-team-member:last-child {
+    margin-bottom: 40px;
+  }
 
   .about-team-member-img-wrap {
     grid-column: 2 / 3;
