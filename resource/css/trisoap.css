@@ -921,8 +921,7 @@ a.no-href {
   /* Accordion - Shared Properties */
 }
 @media screen and (min-width: 980px) {
-  #faq-accordion .ui-accordion-header-active,
-  #faq-accordion .ui-accordion-header:not(.ui-accordion-header-active):hover {
+  #faq-accordion .ui-accordion-header-active {
     text-align: center;
   }
 }

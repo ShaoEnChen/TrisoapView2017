@@ -970,8 +970,7 @@ $buy-now-btn-width: 44%;
 	/* Accordion - Shared Properties */
 	// Laptop
 	@media screen and (min-width: 980px) {
-		.ui-accordion-header-active,
-		.ui-accordion-header:not(.ui-accordion-header-active):hover {
+		.ui-accordion-header-active {
 			text-align: center;
 		}
 	}
@@ -1256,3 +1255,4 @@ $buy-now-btn-width: 44%;
 #shop-guide {
 	margin-top: 40px;
 }
+
