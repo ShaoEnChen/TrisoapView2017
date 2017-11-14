@@ -920,11 +920,6 @@ a.no-href {
 #faq-accordion {
   /* Accordion - Shared Properties */
 }
-@media screen and (min-width: 980px) {
-  #faq-accordion .ui-accordion-header-active {
-    text-align: center;
-  }
-}
 
 /* -------------------------------------------------------------------------
  * 6. 合作夥伴｜Partner

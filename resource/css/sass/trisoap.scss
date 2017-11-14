@@ -968,12 +968,6 @@ $buy-now-btn-width: 44%;
 #faq-accordion {
 	@extend .main-wrap;
 	/* Accordion - Shared Properties */
-	// Laptop
-	@media screen and (min-width: 980px) {
-		.ui-accordion-header-active {
-			text-align: center;
-		}
-	}
 }
 
 /* -------------------------------------------------------------------------
