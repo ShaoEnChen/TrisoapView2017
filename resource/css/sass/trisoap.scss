@@ -109,7 +109,7 @@ $nav-toggle-span-height: 2px;
 	@extend %nav-main-text;
 	color: #fff;
 	text-decoration: none;
-	transition: all .3s ease-in-out;
+	transition: color .3s ease-in-out;
 	&:hover,
 	&:active {
 		color: $nav-link-active-color;
@@ -229,8 +229,8 @@ $nav-toggle-span-height: 2px;
 		left: 0;
 		right: 0;
 		max-height: calc(100vh - 60px);
-		overflow: auto;
 		padding: 0;
+		overflow: auto;
 	}
 
 	/* Mobile menu layout */
@@ -279,12 +279,12 @@ header {
 
 /* -------------------------------------------------------------------------
  * 1. Jumbotron
- * 1.1. Index Jumbotron - FlexSlider
+ * 1.1. Index Header Jumbotron - FlexSlider
  * 1.2. Jumbotron - Img
  * -------------------------------------------------------------------------
  */
 
-/* 1.1. Index Jumbotron - FlexSlider */
+/* 1.1. Index Header Jumbotron - FlexSlider */
 
 .flexslider {
 	margin: 0;
@@ -416,7 +416,7 @@ $footer-line-height: 1.7;
 	line-height: $footer-line-height;
 	.fa {
 		color: rgba(255, 255, 255, 0.5);
-		transition: all 0.3s ease;
+		transition: color 0.3s;
 	}
 }
 
@@ -433,7 +433,7 @@ $footer-line-height: 1.7;
 	margin-bottom: 6px;
 	text-decoration: none;
 	color: #fff;
-	transition: all 0.3s ease;
+	transition: color 0.3s;
 	&:hover {
 		color: #000;
 		.fa {
@@ -556,7 +556,8 @@ a.no-href {
 	text-align: center;
 	background-color: $background-color;
 	color: $font-color;
-	transition: all .3s ease;
+	transition-property: border-color, background-color, color;
+	transition-duration: .3s;
 	font-weight: 200;
 	&:hover {
 		@if $border-color-hover {
@@ -585,7 +586,6 @@ a.no-href {
 	padding: 10px 35px;
 }
 
-
 // hr tags
 @mixin text-sep($border-color) {
 	border-width: 1px;
@@ -605,8 +605,8 @@ a.no-href {
 
 // JQuery UI Accordion
 .ui-accordion-header {
-	font-weight: normal;
 	color: $main-font-color;
+	font-weight: normal;
 	outline: 0;
 }
 
@@ -670,7 +670,7 @@ $buy-now-btn-width: 44%;
 	text-decoration: none;
 	background-color: rgba(0, 0, 0, 0.3);
 	opacity: 0;
-	transition: all 1s ease;
+	transition: opacity 1s;
 }
 
 // Laptop
@@ -816,7 +816,7 @@ $buy-now-btn-width: 44%;
 	.intro-text a {
 		text-decoration: none;
 		color: #000;
-		transition: all .3s ease;
+		transition: color .3s;
 		&:hover {
 			color: #777;
 		}
@@ -1265,4 +1265,41 @@ $buy-now-btn-width: 44%;
 	}
 }
 
+.products {
+	display: flex;
+	flex-flow: row wrap;
+}
 
+.product {
+	box-sizing: border-box;
+	text-align: center;
+	color: $main-font-color;
+	overflow: hidden;
+}
+
+.product-cover-photo {
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+// .product-name
+// .product-intro
+
+// Laptop
+@media screen and (min-width: 980px) {
+	.product {
+		width: 50%;
+		padding: 40px 20px;
+	}
+}
+
+// Mobile
+@media screen and (max-width: 979px) {
+	.product {
+		width: 100%;
+		padding: 10px 20px;
+	}
+}

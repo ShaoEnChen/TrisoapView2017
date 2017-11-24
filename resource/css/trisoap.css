@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 .nav-main-link {
   color: #fff;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 .nav-main-link:hover, .nav-main-link:active {
   color: #d3bd98;
@@ -190,8 +190,8 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     left: 0;
     right: 0;
     max-height: calc(100vh - 60px);
-    overflow: auto;
     padding: 0;
+    overflow: auto;
   }
 
   /* Mobile menu layout */
@@ -238,11 +238,11 @@ header {
 
 /* -------------------------------------------------------------------------
  * 1. Jumbotron
- * 1.1. Index Jumbotron - FlexSlider
+ * 1.1. Index Header Jumbotron - FlexSlider
  * 1.2. Jumbotron - Img
  * -------------------------------------------------------------------------
  */
-/* 1.1. Index Jumbotron - FlexSlider */
+/* 1.1. Index Header Jumbotron - FlexSlider */
 .flexslider {
   margin: 0;
   border: none;
@@ -405,7 +405,7 @@ header {
 }
 #footer .fa {
   color: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 .footer-menu .footer-main-link {
@@ -421,7 +421,7 @@ header {
   margin-bottom: 6px;
   text-decoration: none;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 .footer-main-link:hover {
   color: #000;
@@ -544,7 +544,8 @@ a.no-href {
   text-align: center;
   background-color: transparent;
   color: #fff;
-  transition: all .3s ease;
+  transition-property: border-color, background-color, color;
+  transition-duration: .3s;
   font-weight: 200;
 }
 .primary-btn:hover {
@@ -560,7 +561,8 @@ a.no-href {
   text-align: center;
   background-color: transparent;
   color: #000;
-  transition: all .3s ease;
+  transition-property: border-color, background-color, color;
+  transition-duration: .3s;
   font-weight: 200;
   padding: 8px 25px;
 }
@@ -577,7 +579,8 @@ a.no-href {
   text-align: center;
   background-color: #000;
   color: #fff;
-  transition: all .3s ease;
+  transition-property: border-color, background-color, color;
+  transition-duration: .3s;
   font-weight: 200;
   padding: 10px 35px;
 }
@@ -601,8 +604,8 @@ a.no-href {
 }
 
 .ui-accordion-header {
-  font-weight: normal;
   color: #555;
+  font-weight: normal;
   outline: 0;
 }
 
@@ -662,7 +665,7 @@ a.no-href {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: all 1s ease;
+  transition: opacity 1s;
 }
 
 @media screen and (min-width: 980px) {
@@ -793,7 +796,7 @@ a.no-href {
   .intro-text a {
     text-decoration: none;
     color: #000;
-    transition: all .3s ease;
+    transition: color .3s;
   }
   .intro-text a:hover {
     color: #777;
@@ -1179,4 +1182,38 @@ a.no-href {
 .products-wrap > .slogan, .products-wrap > .slogan-title {
   color: #555;
   line-height: 1.7;
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.product {
+  box-sizing: border-box;
+  text-align: center;
+  color: #555;
+  overflow: hidden;
+}
+
+.product-cover-photo {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+.product-cover-photo:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 980px) {
+  .product {
+    width: 50%;
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 979px) {
+  .product {
+    width: 100%;
+    padding: 10px 20px;
+  }
 }
