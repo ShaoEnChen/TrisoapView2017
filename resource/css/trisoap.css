@@ -491,6 +491,7 @@ header {
  * 8. 聯絡我們｜Contact
  * 9. 購物須知｜Shopping Guide
  * 10. 單品 / 旅用皂絲｜Soap / Soapstring
+ * 11. 希望留心語｜Heart Message
  * =========================================================================
  */
 /* -------------------------------------------------------------------------
@@ -501,7 +502,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide-wrap, .products-wrap {
+.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide-wrap, .products-wrap, .heart-wrap {
   margin: 60px 8%;
 }
 
@@ -512,7 +513,7 @@ a.no-href {
   letter-spacing: 4.32px;
 }
 
-.main-content-subtitle {
+.main-content-text, .main-content-subtitle {
   color: #555;
   font-weight: 200;
   line-height: 1.7;
@@ -1242,3 +1243,7 @@ a.no-href {
     padding: 10px 20px;
   }
 }
+/* -------------------------------------------------------------------------
+ * 11. 希望留心語｜Heart Message
+ * -------------------------------------------------------------------------
+ */
