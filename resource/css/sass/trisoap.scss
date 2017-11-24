@@ -107,8 +107,8 @@ $nav-toggle-span-height: 2px;
 
 .nav-main-link {
 	@extend %nav-main-text;
-	color: #fff;
 	text-decoration: none;
+	color: #fff;
 	transition: color .3s ease-in-out;
 	&:hover,
 	&:active {
@@ -1281,8 +1281,25 @@ $buy-now-btn-width: 44%;
 	width: 100%;
 	height: auto;
 }
+
 // .product-name
-// .product-intro
+
+.product-link {
+	text-decoration: none;
+	color: #000;
+	transition: color .3s;
+	font-size: 14px;
+	font-weight: normal;
+	&:hover {
+		color: #666;
+	}
+}
+
+.product-intro {
+	font-weight: 200;
+	line-height: 1.7;
+	letter-spacing: 0.03em;
+}
 
 // Laptop
 @media screen and (min-width: 980px) {

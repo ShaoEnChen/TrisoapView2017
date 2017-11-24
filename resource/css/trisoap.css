@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 }
 
 .nav-main-link {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   transition: color .3s ease-in-out;
 }
 .nav-main-link:hover, .nav-main-link:active {
@@ -1198,6 +1198,23 @@ a.no-href {
 .product-cover-img {
   width: 100%;
   height: auto;
+}
+
+.product-link {
+  text-decoration: none;
+  color: #000;
+  transition: color .3s;
+  font-size: 14px;
+  font-weight: normal;
+}
+.product-link:hover {
+  color: #666;
+}
+
+.product-intro {
+  font-weight: 200;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 980px) {
