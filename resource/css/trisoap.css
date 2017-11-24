@@ -502,7 +502,7 @@ a.no-href {
   cursor: default;
 }
 
-.main-wrap, #media-wrap, #faq-accordion, #partner-accordion, #guide-wrap, .products-wrap, .heart-wrap {
+.main-wrap {
   margin: 60px 8%;
 }
 
@@ -922,7 +922,8 @@ a.no-href {
  * -------------------------------------------------------------------------
  */
 #faq-accordion {
-  /* Accordion - Shared Properties */
+  margin: 60px 8%;
+  /* Completed by shared properties - accordians */
 }
 
 /* -------------------------------------------------------------------------
@@ -930,7 +931,8 @@ a.no-href {
  * -------------------------------------------------------------------------
  */
 #partner-accordion {
-  /* Accordion - Shared Properties */
+  margin: 60px 8%;
+  /* Completed by shared properties - accordians */
 }
 #partner-accordion > .accordion {
   padding-left: 0;
@@ -1063,11 +1065,6 @@ a.no-href {
   margin: 60px 8% 0;
 }
 
-#contact-map,
-#contact-form {
-  margin: 0 15px;
-}
-
 #contact-form-name,
 #contact-form-email,
 #contact-form-phone,
@@ -1101,7 +1098,7 @@ a.no-href {
 @media screen and (min-width: 980px) {
   #contact {
     display: grid;
-    grid-template-columns: 8% 2fr 1fr 8%;
+    grid-template-columns: 8% 3fr 4% 2fr 8%;
     grid-template-rows: 60px auto 60px;
     align-items: center;
   }
@@ -1113,7 +1110,7 @@ a.no-href {
   }
 
   #contact-form {
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
     grid-row: 2 / 3;
   }
 }
@@ -1175,8 +1172,11 @@ a.no-href {
 
 /* -------------------------------------------------------------------------
  * 10. 單品 / 旅用皂絲｜Soap / Soapstring
+ * 10.1. 商品全覽頁
+ * 10.2. 單項商品頁
  * -------------------------------------------------------------------------
  */
+/* 10.1. 商品全覽頁 */
 .products-wrap > .slogan-title {
   margin: 35px auto;
 }
@@ -1243,7 +1243,9 @@ a.no-href {
     padding: 10px 20px;
   }
 }
+/* 10.2. 單項商品頁 */
 /* -------------------------------------------------------------------------
  * 11. 希望留心語｜Heart Message
  * -------------------------------------------------------------------------
  */
+/* Completed by shared properties */

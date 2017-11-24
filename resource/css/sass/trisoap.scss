@@ -851,10 +851,6 @@ $buy-now-btn-width: 44%;
  * -------------------------------------------------------------------------
  */
 
-#media-wrap {
-	@extend .main-wrap;
-}
-
 .media-link {
 	text-decoration: none;
 }
@@ -975,8 +971,8 @@ $buy-now-btn-width: 44%;
  */
 
 #faq-accordion {
-	@extend .main-wrap;
-	/* Accordion - Shared Properties */
+	margin: 60px 8%;
+	/* Completed by shared properties - accordians */
 }
 
 /* -------------------------------------------------------------------------
@@ -984,10 +980,9 @@ $buy-now-btn-width: 44%;
  * -------------------------------------------------------------------------
  */
 
- #partner-accordion {
- 	@extend .main-wrap;
-
- 	/* Accordion - Shared Properties */
+#partner-accordion {
+	margin: 60px 8%;
+	/* Completed by shared properties - accordians */
 	& > .accordion {
 		padding-left: 0;
 		padding-right: 0;
@@ -1136,11 +1131,6 @@ $buy-now-btn-width: 44%;
 	margin: 60px $wrap-lr-margin 0;
 }
 
-#contact-map,
-#contact-form {
-	margin: 0 15px;
-}
-
 #contact-form-name,
 #contact-form-email,
 #contact-form-phone,
@@ -1179,19 +1169,19 @@ $buy-now-btn-width: 44%;
 @media screen and (min-width: 980px) {
 	#contact {
 		display: grid;
-		grid-template-columns: 8% 2fr 1fr 8%;
+		grid-template-columns: 8% 3fr 4% 2fr 8%;
 		grid-template-rows: 60px auto 60px;
 		align-items: center;
 	}
 
 	#contact-map {
 		height: 400px;
-		grid-column: 2 / 3;	// out of 5
+		grid-column: 2 / 3;	// out of 6
 		grid-row: 2 / 3;	// out of 4
 	}
 
 	#contact-form {
-		grid-column: 3 / 4;	// out of 5
+		grid-column: 4 / 5;	// out of 6
 		grid-row: 2 / 3;	// out of 4
 	}
 }
@@ -1215,7 +1205,6 @@ $buy-now-btn-width: 44%;
  */
 
 #guide-wrap {
-	@extend .main-wrap;
 	color: $main-font-color;
 }
 
@@ -1260,11 +1249,14 @@ $buy-now-btn-width: 44%;
 
 /* -------------------------------------------------------------------------
  * 10. 單品 / 旅用皂絲｜Soap / Soapstring
+ * 10.1. 商品全覽頁
+ * 10.2. 單項商品頁
  * -------------------------------------------------------------------------
  */
 
+/* 10.1. 商品全覽頁 */
+
 .products-wrap {
-	@extend .main-wrap;
 	& > .slogan-title {
 		margin: 35px auto;
 	}
@@ -1290,8 +1282,6 @@ $buy-now-btn-width: 44%;
 	width: 100%;
 	height: auto;
 }
-
-// .product-name
 
 .product-link {
 	text-decoration: none;
@@ -1339,11 +1329,13 @@ $buy-now-btn-width: 44%;
 	}
 }
 
+/* 10.2. 單項商品頁 */
+
+
+
 /* -------------------------------------------------------------------------
  * 11. 希望留心語｜Heart Message
  * -------------------------------------------------------------------------
  */
 
-.heart-wrap {
-	@extend .main-wrap;
-}
+/* Completed by shared properties */
