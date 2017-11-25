@@ -18,10 +18,12 @@ else {
 
 include_once('footer.html');
 
-if($_GET['route'] === 'faq' || $_GET['route'] === 'partner') {
+// JQuery UI
+if($_GET['route'] === 'faq' || $_GET['route'] === 'partner' || $_GET['route'] === 'single_product') {
 	echo '<link href="resource/js/jquery-ui-accordion/jquery-ui.min.css" rel="stylesheet">';
 	echo '<script src="resource/js/jquery-ui-accordion/jquery-ui.min.js" defer></script>';
 }
+// Google Map API
 if($_GET['route'] === 'contact') {
 	echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLzZouUqN1dWEVR9_75YO6bXL5OuhcRs"></script>';
 	echo '<script src="resource/js/contact-map.js" defer></script>';
