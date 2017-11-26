@@ -36,6 +36,18 @@ $('#trial-recommend > .flexslider').flexslider({
 	animation: "slide",
 	directionNav: false,
 	controlNav: false,
+	slideshowSpeed: 8000,
+	animationSpeed: 1500,
+});
+
+/* ===================================================
+ * 單項商品頁｜Single Product - flexslider initialization
+ * ===================================================
+ */
+
+$('#single-product-carousel > .flexslider').flexslider({
+	animation: "slide",
+	controlNav: "thumbnails",
 	slideshowSpeed: 4000,
 	animationSpeed: 600,
 });
@@ -79,5 +91,4 @@ if(window.jQuery.ui) {
 		collapsible: true,
 		heightStyle: "content",
 	});
-
 }

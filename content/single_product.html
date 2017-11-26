@@ -1,7 +1,19 @@
 		<main>
-			<div class="main-wrap">
+			<div id="single-product-wrap" class="main-wrap">
 				<div id="single-product-carousel">
-
+					<div class="flexslider">
+						<ul class="slides">
+							<li data-thumb="resource/img/product/detail/string_gift00.jpg">
+								<img src="resource/img/product/detail/string_gift00.jpg">
+							</li>
+							<li data-thumb="resource/img/product/detail/string_gift01.jpg">
+								<img src="resource/img/product/detail/string_gift01.jpg">
+							</li>
+							<li data-thumb="resource/img/product/detail/string_gift02.jpg">
+								<img src="resource/img/product/detail/string_gift02.jpg">
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div id="single-product-desc">
 					<h3 class="main-content-title">[Product Name]</h3>
@@ -37,8 +49,14 @@
 						</p>
 					</div>
 					<hr class="text-sep-sm">
-					<h2 id="single-product-price">$240</h2>
-
+					<div id="single-product-purchase">
+						<h2 id="single-product-price">$240</h2>
+						<label for="purchase-amount">數量：</label>
+						<input id="purchase-amount" class="form-field" type="number" name="ORDAMT" value="1" min="1">
+						<a class="submit-btn" href="#">
+							加入購物車
+						</a>
+					</div>
 				</div>
 			</div>
 		</main>
