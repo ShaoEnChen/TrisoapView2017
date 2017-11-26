@@ -33,7 +33,6 @@ else {
 
 include_once('footer.html');
 
-<<<<<<< HEAD
 // FlexSlider
 if(!isset($_GET['route']) || $_GET['route'] === 'single_product'){
 	echo '<script src="resource/flexslider/jquery.flexslider-min.js" defer></script>';
@@ -44,13 +43,6 @@ if($_GET['route'] === 'faq' || $_GET['route'] === 'partner' || $_GET['route'] ==
 	echo '<script src="resource/js/jquery-ui-accordion/jquery-ui.min.js" defer></script>';
 }
 
-=======
-// JQuery UI
-if($_GET['route'] === 'faq' || $_GET['route'] === 'partner' || $_GET['route'] === 'single_product') {
-	echo '<link href="resource/js/jquery-ui-accordion/jquery-ui.min.css" rel="stylesheet">';
-	echo '<script src="resource/js/jquery-ui-accordion/jquery-ui.min.js" defer></script>';
-}
->>>>>>> decdb66cf0ff08d0df18267b65922f411a282e8e
 // Google Map API
 if($_GET['route'] === 'contact') {
 	echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqLzZouUqN1dWEVR9_75YO6bXL5OuhcRs"></script>';

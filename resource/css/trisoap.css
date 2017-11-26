@@ -1247,7 +1247,6 @@ a.no-href {
   }
 }
 /* 10.2. 單項商品頁｜Single Product */
-<<<<<<< HEAD
 @media screen and (min-width: 980px) {
   #single-product-wrap {
     display: flex;
@@ -1271,8 +1270,6 @@ a.no-href {
     margin-bottom: 35px;
   }
 }
-=======
->>>>>>> decdb66cf0ff08d0df18267b65922f411a282e8e
 #single-product-accordion > .ui-accordion-header {
   margin-bottom: 20px;
   padding: 10px 15px;
@@ -1288,7 +1285,6 @@ a.no-href {
   color: #666;
 }
 
-<<<<<<< HEAD
 #single-product-price,
 #purchase-amount,
 #single-product-purchase > .submit-btn {
@@ -1299,17 +1295,12 @@ a.no-href {
 
 #single-product-price {
   margin: 0 20px;
-=======
-#single-product-price {
-  display: inline-block;
->>>>>>> decdb66cf0ff08d0df18267b65922f411a282e8e
   color: #555;
   font-weight: 200;
   line-height: 1.5;
   letter-spacing: 0.18em;
 }
 
-<<<<<<< HEAD
 label[for="purchase-amount"] {
   color: #555;
 }
@@ -1319,8 +1310,6 @@ label[for="purchase-amount"] {
   max-width: 120px;
 }
 
-=======
->>>>>>> decdb66cf0ff08d0df18267b65922f411a282e8e
 /* -------------------------------------------------------------------------
  * 11. 希望留心語｜Heart Message
  * -------------------------------------------------------------------------
